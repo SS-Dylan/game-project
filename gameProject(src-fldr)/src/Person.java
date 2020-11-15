@@ -25,7 +25,8 @@ public abstract class person
     public boolean equip(Equipment e){
         return true;
     }
-    public int attack(){
+    public int attack()
+    {
 
     }
 
