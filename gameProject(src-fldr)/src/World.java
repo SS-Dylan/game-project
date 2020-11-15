@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 //Author:   Seth Gilstrap
 
->>>>>>> 2a852b61294ac4d29313f456e81dabc3b5e2ccc8
 import java.util.ArrayList;
 
 public class World {
@@ -15,20 +12,8 @@ public class World {
 
     public World()
     {
-<<<<<<< HEAD
 
-=======
-        chest0 = new chest;
-        chest1 = new chest;
-        chest2 = new chest;
-        barrel0 = new barrel;
-        barrel1 = new barrel;
-        barrel2 = new barrel;
-        goblin0 = new person;
-        goblin1 = new person;
-        goblin2 = new person;
-        human0 = new person;
->>>>>>> 2a852b61294ac4d29313f456e81dabc3b5e2ccc8
+
     }
 
     public void makeChest()
@@ -45,13 +30,13 @@ public class World {
     public void makeHuman()
     {
 
-        Person.add(Person);
+        Person.add(Human);
     }
 
     public void makeGoblin()
     {
 
-        Person.add(goblin);
+        Person.add(Goblin);
     }
 
     public String listChests()
