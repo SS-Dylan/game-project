@@ -65,7 +65,7 @@ public class Weapon extends Equipment
 	 */
 	public String getName()
 	{
-		String n = Equipment.getName();
+		String n = super.getName();
 		if(iceDamage > 0 && fireDamage > 0 && (iceDamage + fireDamage) < 7)
 			n += " of Wrath";
 		if(iceDamage > 0 && fireDamage > 0 && (iceDamage + fireDamage) > 6)

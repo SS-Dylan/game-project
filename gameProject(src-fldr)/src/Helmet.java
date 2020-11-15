@@ -32,6 +32,6 @@ public class Helmet extends Armor
 	Helmet()
 	{
 		super(1, false, false);
-		Equipment.setName("Helmet");
+		super.setName("Helmet");
 	}//end Helmet
 }//end Helmet.java

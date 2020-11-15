@@ -1,40 +1,33 @@
+import java.util.ArrayList;
+
 public class World {
 
-    public Arraylist<Chest> chest = new ArrayList<Chest>();
-    public ArrayList<Barrel> barrel = new ArrayList<Barrel>();
-    public ArrayList<Person> people = new ArrayList<Person>();
-    public Person player;
+    public ArrayList Chest = new ArrayList<>();
+    public ArrayList Barrel  = new ArrayList<>();
+    public ArrayList Person = new ArrayList<>();
+
+
 
     public World()
     {
-        chest = new chest;
-        chest = new chest;
-        chest = new chest;
-        barrel = new barrel;
-        barrel = new barrel;
-        barrel = new barrel;
-        goblin = new person;
-        goblin = new person;
-        goblin = new person;
-        human = new person;
+
     }
 
     public void makeChest()
     {
 
-        Chest.add();
+        Chest.add(Chest);
     }
 
     public void makeBarrel()
     {
-        new barrel;
-        Barrel.add();
+        Barrel.add(Barrel);
     }
 
     public void makeHuman()
     {
 
-        Person.add(human);
+        Person.add(Person);
     }
 
     public void makeGoblin()
@@ -49,13 +42,13 @@ public class World {
             String details = "";
             int i = 0;
             details += "Chests:\n";
-            if(chest.isEmpty() == true)
+            if(Chest.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<chest.size())
+                while(i<Chest.size())
                 {
-                    details += (i+ ". " + chest.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + Chest.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
@@ -68,13 +61,13 @@ public class World {
             String details = "";
             int i = 0;
             details += "Barrels:\n";
-            if(barrel.isEmpty() == true)
+            if(Barrel.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<barrel.size())
+                while(i<Barrel.size())
                 {
-                    details += (i+ ". " + barrel.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + Barrel.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else

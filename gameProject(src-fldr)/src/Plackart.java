@@ -33,6 +33,6 @@ public class Plackart extends Armor
 	Plackart()
 	{
 		super(4, false, true);
-		Equipment.setName("Plackart");
+		super.setName("Plackart");
 	}//end Plackart
 }//end Plackart.java
