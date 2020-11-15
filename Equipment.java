@@ -51,8 +51,9 @@ public class Equipment
 	 *
 	 * <hr>
 	 * @param args
+	 * @return 
 	 */
-	public static String getName()
+	public String getName()
 	{
 		return name;
 	}//end getName
@@ -66,7 +67,7 @@ public class Equipment
 	 * <hr>
 	 * @param args
 	 */
-	public static int getPrice()
+	public int getPrice()
 	{
 		return price;	
 	}//end getPrice
@@ -80,7 +81,7 @@ public class Equipment
 	 * <hr>
 	 * @param args
 	 */
-	public static double getDurability()
+	public double getDurability()
 	{
 		return durability;
 	}//end getDurability
@@ -117,7 +118,7 @@ public class Equipment
 	 * <hr>
 	 * @param args
 	 */
-	public static void setName(String newName)
+	public void setName(String newName)
 	{
 		name = newName;
 	}//end setName
@@ -131,7 +132,7 @@ public class Equipment
 	 * <hr>
 	 * @param args
 	 */
-	public static void setPrice(int newPrice)
+	public void setPrice(int newPrice)
 	{
 		price = newPrice;
 	}//end setPrice

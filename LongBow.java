@@ -31,7 +31,7 @@ public class LongBow extends Ranged
 	 */
 	public LongBow()
 	{
-		super Ranged("LongBow", 5, 0 ,0, 150, 100);
+		super("LongBow", 5, 0 ,0, 150, 100);
 		addAmmo(-50);
 		setPrice(85);
 	}//end LongBow

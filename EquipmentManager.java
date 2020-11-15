@@ -10,9 +10,7 @@
  * ---------------------------------------------------------------------------
  */
 
-
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * Manager class for equipment and related classes.	 
@@ -31,7 +29,7 @@ public class EquipmentManager
 	private ArrayList<ThrowingAxe> throwingAxes = new ArrayList<ThrowingAxe>();
 	private ArrayList<Spear> spears = new ArrayList<Spear>();
 	private ArrayList<Sword> swords = new ArrayList<Sword>();
-
+	private ArrayList<Equipment> equipment = new ArrayList<Equipment>();
 	
 		
 		/**
@@ -122,13 +120,13 @@ public class EquipmentManager
 		public void removeEquipment(String list, int index)
 		{
 			if(list == "plackarts")
-				plackarts.remove(index);
+				removeEquipment(plackarts, index);
 			if(list == "helmets")
-				helmets.remove (index);
+				removeEquipment(helmets, index);
 			if(list == "longBows")
-				longBows.remove (index);
+			removeEquipment(helmets, index);
 			if(list == "throwingAxes")
-				throwingAxes.remove(index);
+			removeEquipment(helmets, index);
 			if(list == "swords")
 				swords.remove (index);
 			if(list == "spears")
@@ -422,74 +420,6 @@ public class EquipmentManager
 		 */
 		private void removeEquipment(ArrayList list, int index)	//removeEquipment implemented by Seth and Torrey
 		{
-			if (list.equalsIgnoreCase("Plackarts"))
-			{
-				plackarts.remove(index);
-			}
-			else if (list.equalsIgnoreCase("LongBows"))
-			{
-				longBows.remove(index);
-			}
-			else if (list.equalsIgnoreCase("Helmets"))
-			{
-				helmets.remove(index);
-			}
-			else if (list.equalsIgnoreCase("ThrowingAxes"))
-			{
-				throwingAxes.remove(index);
-			}
-			else if (list.equalsIgnoreCase("Spears"))
-			{
-				spears.remove(index);
-			}
-			else if (list.equalsIgnoreCase("Swords"))
-			{
-				swords.remove(index);
-			}
-			else
-			{
-				System.out.println("Please input a valid Equipment type from the following list:/nPlackarts, Helmets, LongBows, ThrowingAxes, Spears, Swords")
-			}
+			list.remove(index);
 		}//end removeEquipment
-		
-		/**
-		 * Enter method description here         
-		 *
-		 * <hr>
-		 * Date created: Oct 14, 2020
-		 *
-		 * <hr>
-		 * @param args
-		 */
-		private getEquipmentDetails(ArrayList list, int index)	//getEquipmentDetails implemented by Seth and Torrey
-		{
-			if (list.equalsIgnoreCase("Plackarts"))
-			{
-				return plackarts.get(index).toString();
-			}
-			else if (list.equalsIgnoreCase("LongBows"))
-			{
-				return longBows.get(index).toString();
-			}
-			else if (list.equalsIgnoreCase("Helmets"))
-			{
-				list = helmets.get(index).toString();
-			}
-			else if (list.equalsIgnoreCase(ThrowingAxes))
-			{
-				list = throwingAxes.get(index).toString();
-			}
-			else if (list.equalsIgnoreCase("Spears"))
-			{
-				list = spears.get(index).toString();
-			}
-			else if (list.equalsIgnoreCase("Swords"))
-			{
-				list = swords.get(index).toString();
-			}
-			else
-			{
-				System.out.println("Please input a valid Equipment type from the following list:/nPlackarts, Helmets, LongBows, ThrowingAxes, Spears, Swords")
-			}
-	}//end getEquipmentDetails
 }//end EquipmentManager.java

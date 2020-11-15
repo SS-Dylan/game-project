@@ -32,6 +32,6 @@ public class Sword extends Weapon
 	 */
 	public Sword()
 	{
-		super Weapon("Sword", 5,0,0,WeaponHandedness.Versatile);
+		super("Sword", 5,0,0,WeaponHandedness.Versatile);
 	}//end Sword
 }//end Sword.java

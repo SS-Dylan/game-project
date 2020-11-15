@@ -32,7 +32,7 @@ public class Plackart extends Armor
 	 */
 	Plackart()
 	{
-		super Armor(4, false, true);
+		super(4, false, true);
 		Equipment.setName("Plackart");
 	}//end Plackart
 }//end Plackart.java

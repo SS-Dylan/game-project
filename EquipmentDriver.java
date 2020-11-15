@@ -23,23 +23,23 @@ import java.util.ArrayList;
 						EquipmentManager.clearAll();
 						break;
 					case "count equipment":
-						countEquipment();
+						EquipmentManager.countEquipment();
 						break;
 					case "count armor":
-						countArmor();
+						EquipmentManager.countArmor();
 						break;
 					case "count weapons":
-						countWeapon();
+						EquipmentManager.countWeapon();
 						break;
 					case "list all":
 						System.out.print("\033[H\033[2J");  
 						System.out.flush();
-						getEquipmentList();
+						EquipmentManager.getEquipmentList();
 						break;
 					case "list all details":
 						System.out.print("\033[H\033[2J");  
 						System.out.flush();
-						getEquipmentListDetails();
+						EquipmentManager.getEquipmentListDetails();
 						break;
 					default:
 						System.out.println("Please enter a valid command.");
@@ -53,22 +53,22 @@ import java.util.ArrayList;
 					switch(s)
 					{
 						case "plackart":
-							addPlackart();
+							EquipmentManager.addPlackart();
 							break;
 						case "helmet":
-							addHelmet();
+							EquipmentManager.addHelmet();
 							break;
 						case "spear":
-							addSpear();
+							EquipmentManager.addSpear();
 							break;
 						case "sword":
-							addSword();
+							EquipmentManager.addSword();
 							break;
 						case "longBow":
-							addPLongbow();
+							EquipmentManager.addPLongbow();
 							break;
 						case "throwingAxe":
-							addThrowingAxe();
+							EquipmentManager.addThrowingAxe();
 							break;
 						default:
 							System.out.println("Please use a valid equipment type.");
@@ -79,13 +79,13 @@ import java.util.ArrayList;
 					System.out.println("Enter what item you would like to remove at what index.\n(For example, sword 2)");
 					s = sc.nextLine();
 					int i = sc.nextInt();
-					removeEquipment(s, i);
+					EquipmentManager.removeEquipment(s, i);
 					break;
 				case "Equipment Info":
 					System.out.println("Enter what item you would like to see info on.\n(For example: sword 2)");
 					s = sc.nextLine();
 					i = sc.nextInt();
-					getEquipmentDetails(s, i);
+					EquipmentManager.getEquipmentDetails(s, i);
 					break;
 				default:
 					System.out.println("Please enter a valid command.");

@@ -32,7 +32,7 @@ public class Spear extends Weapon
 	 */
 	public Spear()
 	{
-		super Weapon("Spear", 8,0,0,WeaponHandedness.TwoHanded);
+		super("Spear", 8,0,0,WeaponHandedness.TwoHanded);
 		Equipment.setPrice(135);
 	}//end Spear
 }//end Spear.java

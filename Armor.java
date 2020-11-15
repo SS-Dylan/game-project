@@ -26,7 +26,7 @@ public class Armor extends Equipment
 	 */
 	public Armor(int newArmorBonus, boolean ice, boolean fire)
 	{
-		super Equipment("Armor", 150, .8);
+		super("Armor", 150, .8);
 		armorBonus = newArmorBonus;
 		iceProtection = ice;
 		fireProtection = fire;
@@ -43,7 +43,7 @@ public class Armor extends Equipment
 	 */
 	public String getName()
 	{
-		String n = Equipment.getName();
+		String n = super.getName();
 		if(iceProtection == true && fireProtection == true)
 			n += " of Environmental Protection";
 		if(iceProtection == true && fireProtection == false)

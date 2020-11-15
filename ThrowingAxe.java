@@ -32,7 +32,7 @@ public class ThrowingAxe extends Ranged
 	 */
 	public ThrowingAxe()
 	{
-		super Ranged("Throwing Axe", 8, 0, 0, 30, 15 );
+		super("Throwing Axe", 8, 0, 0, 30, 15 );
 		addAmmo(-12);
 		setPrice(125);
 		setWeaponHandedness(WeaponHandedness.OneHanded);

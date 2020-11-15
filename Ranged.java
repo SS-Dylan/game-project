@@ -37,7 +37,7 @@ public class Ranged extends Weapon
 	 */
 	public Ranged(String name, int dmg, int ice, int fire, double rng, int max)
 	{
-		super Weapon(name, dmg, ice, fire, WeaponHandedness.TwoHanded);
+		super(name, dmg, ice, fire, WeaponHandedness.TwoHanded);
 		range = rng;
 		maxAmmo = max;
 		currentAmmo = maxAmmo;
