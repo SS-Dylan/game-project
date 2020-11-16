@@ -1,7 +1,7 @@
 import java.lang.invoke.StringConcatFactory;
 import java.util.ArrayList;
 
-public abstract class Person implements IInventory, Ihitable {
+public abstract class Person implements IInventory, IHitable {
     private String name;
     private ArrayList<String> thingsToSay = new ArrayList();
     private Helmet helmet;
