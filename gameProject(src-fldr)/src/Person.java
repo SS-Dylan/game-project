@@ -14,8 +14,8 @@ public abstract class Person implements IInventory, IHitable {
     public Person(String Name) {
 
         name= Name;
-        maxHealth= Ihitable.maxHealth;
-        currentHealth =Ihitable.currentHealth;
+        maxHealth= IHitable.maxHealth;
+        currentHealth =IHitable.currentHealth;
     }
 
     public String saySomething()
