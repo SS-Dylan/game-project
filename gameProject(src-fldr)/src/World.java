@@ -13,41 +13,22 @@ public class World implements IUsable, IHitable, IInventory{
 
     public World()
     {
-    makeChest();
-    makeBarrel();
-    makeHuman();
-    makeGoblin();
-=======
-
-    public World()
-    {
         makeChest();
         makeBarrel();
         makeHuman();
         makeGoblin();
->>>>>>> 657f1139a0abfcff2c72c7c5ea0a4f67c2be575e
     }
 
     public void makeChest()
     {
-<<<<<<< HEAD
         Chest.add(1);
-        Chest chest1 = new Chest();
-        Chest.add(chest1);
-       Chest.add(1);
-=======
-        Chest.add(Chest);
->>>>>>> 657f1139a0abfcff2c72c7c5ea0a4f67c2be575e
     }
 
     public void makeBarrel()
     {
-<<<<<<< HEAD
         Barrel.add(2);
         Barrel.add(1);
-=======
         Barrel.add(Barrel);
->>>>>>> 657f1139a0abfcff2c72c7c5ea0a4f67c2be575e
     }
 
     public void makeHuman()
@@ -81,12 +62,8 @@ public class World implements IUsable, IHitable, IInventory{
             {
                 while(i<chest.size())
                 {
-<<<<<<< HEAD
                     details += (i+ ". " + Chest.get(i).getEquipmentList +"\n");
-=======
-                    details += (i+ ". " + chest.get(i).getEquipmentList() +"\n");
->>>>>>> 657f1139a0abfcff2c72c7c5ea0a4f67c2be575e
-                }//end while
+                }
                 i = 0;
             }//end else
         }
@@ -153,7 +130,7 @@ public class World implements IUsable, IHitable, IInventory{
 
     public void transferEquipment(IInventory source, IInventory destination)
     {
-
+        IInventory.
     }
 
     public String peakInside(IInventory inventory)
