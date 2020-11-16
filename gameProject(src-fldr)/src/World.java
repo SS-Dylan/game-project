@@ -2,30 +2,30 @@
 
 import java.util.ArrayList;
 
-public class World {
+public class World implements IUsable, IHitable, IInventory{
 
     public ArrayList Chest = new ArrayList<>();
-    public ArrayList Barrel  = new ArrayList<>();
+    public ArrayList Barrel = new ArrayList<>();
     public ArrayList Person = new ArrayList<>();
     public person player;
 
 
-
     public World()
     {
-
-
+    makeChest();
+    makeBarrel();
+    makeHuman();
+    makeGoblin();
     }
 
     public void makeChest()
     {
-
-        Chest.add(Chest);
+        Chest.add(1);
     }
 
     public void makeBarrel()
     {
-        Barrel.add(Barrel);
+        Barrel.add(2);
     }
 
     public void makeHuman()
@@ -46,13 +46,16 @@ public class World {
             String details = "";
             int i = 0;
             details += "Chests:\n";
-            if(Chest.isEmpty() == true)
+            if(chest.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<Chest.size())
+                while(i<chest.size())
                 {
+
                     details += (i+ ". " + Chest.get(i).getEquipmentList +"\n");
+                    details += (i+ ". " + chest.get(i).getEquipmentList() +"\n");
+
                 }//end while
                 i = 0;
             }//end else
@@ -65,13 +68,13 @@ public class World {
             String details = "";
             int i = 0;
             details += "Barrels:\n";
-            if(Barrel.isEmpty() == true)
+            if(barrel.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<Barrel.size())
+                while(i<barrel.size())
                 {
-                    details += (i+ ". " + Barrel.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + barrel.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
@@ -140,11 +143,12 @@ public class World {
 
     public String listPlayerInventory()
     {
-
+        return IInventory.get(player);
     }
 
     public boolean equipEquipment(Equipment eqmt)
     {
+        inventory.remove(eqmt);
 
     }
 
