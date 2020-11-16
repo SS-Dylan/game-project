@@ -11,7 +11,6 @@ public abstract class Person
     private int currentHealth;
 
     public Person(String Name) {
-
         name= Name;
         maxHealth= 50;
     }
