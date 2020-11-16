@@ -1,4 +1,3 @@
-import java.lang.invoke.StringConcatFactory;
 import java.util.ArrayList;
 
 public abstract class Person implements IInventory, IHitable {
@@ -56,7 +55,7 @@ public abstract class Person implements IInventory, IHitable {
         }
         return true;
     }
-    public int attack(Ihitable target){
+    public int attack(IHitable target){
 
         if (weapon == null)
         {

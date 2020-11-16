@@ -212,7 +212,7 @@ public class Weapon extends Equipment implements IUsable
 	public boolean use(Person person) {
 		return false;
 	}
-	public int attack(Ihitable hitable)
+	public int attack(IHitable hitable)
 	{
 		return hitable.takeDamage(getNormalDamage(),getFireDamage(),getIceDamage());
 	}

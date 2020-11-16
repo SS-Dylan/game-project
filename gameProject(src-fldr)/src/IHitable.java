@@ -1,4 +1,4 @@
-public interface Ihitable
+public interface IHitable
 {
     int maxHealth = 50;
     int currentHealth= 40;
