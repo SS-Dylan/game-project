@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
  public class GameDriver { //start GameDriver
-    public static void main(String[] args) { //start main method
+	public static void main(String[] args) { //start main method
 		Scanner sc = new Scanner(System.in);	//All case switch methods implemented by Dylan Shaffer
 		System.out.println("What would you like to do?\nManage Equipment\nManage World\nAdd Equipment\nRemove Equipment\nEquipment Info");
 		String s = sc.nextLine();
@@ -113,6 +113,7 @@ import java.util.ArrayList;
 							default:
 								System.out.println("Please input a valid command.");
 								break;
+						}
 					case "Manage":
 							System.out.println("List of available commands:");
 							System.out.println("list people\nlist barrels\nlookAt person #\nspeakTo person #\n");
