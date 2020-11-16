@@ -1,6 +1,6 @@
 import java.util.*;
 
-public abstract class person
+public abstract class Person
 {
     private String name;
     private ArrayList<String> thingsToSay = new ArrayList();
@@ -10,7 +10,7 @@ public abstract class person
     private int maxHealth;
     private int currentHealth;
 
-    public person(String Name) {
+    public Person(String Name) {
 
         name= Name;
         maxHealth= 50;
