@@ -7,6 +7,7 @@ public class World {
     public ArrayList Chest = new ArrayList<>();
     public ArrayList Barrel  = new ArrayList<>();
     public ArrayList Person = new ArrayList<>();
+    public person player;
 
 
 
@@ -51,7 +52,7 @@ public class World {
             {
                 while(i<Chest.size())
                 {
-                    details += (i+ ". " + Chest.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + Chest.get(i).getEquipmentList +"\n");
                 }//end while
                 i = 0;
             }//end else

@@ -25,6 +25,7 @@ public abstract class person
     public boolean equip(Equipment e){
         return true;
     }
+
     public int attack()
     {
 
@@ -39,7 +40,8 @@ public abstract class person
         return "";
     }
 
-    public ArrayList<String> getThingsToSay(){
+    public ArrayList<String> getThingsToSay()
+    {
 
     }
 
