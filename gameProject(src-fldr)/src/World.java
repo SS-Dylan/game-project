@@ -12,15 +12,24 @@ public class World implements IUsable, IHitable, IInventory{
 
     public World()
     {
+<<<<<<< HEAD
     makeChest();
     makeBarrel();
     makeHuman();
     makeGoblin();
+=======
+
+>>>>>>> f5980222f40a8273b816212f481458a561c40110
     }
 
     public void makeChest()
     {
+<<<<<<< HEAD
         Chest.add(1);
+=======
+        Chest chest1 = new Chest();
+        Chest.add(chest1);
+>>>>>>> f5980222f40a8273b816212f481458a561c40110
     }
 
     public void makeBarrel()
@@ -46,16 +55,20 @@ public class World implements IUsable, IHitable, IInventory{
             String details = "";
             int i = 0;
             details += "Chests:\n";
-            if(chest.isEmpty() == true)
+            if(Chest.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<chest.size())
+                while(i<Chest.size())
                 {
+<<<<<<< HEAD
 
                     details += (i+ ". " + Chest.get(i).getEquipmentList +"\n");
                     details += (i+ ". " + chest.get(i).getEquipmentList() +"\n");
 
+=======
+                    details += (i+ ". " + Chest.get(i).getEquipmentList() +"\n");
+>>>>>>> f5980222f40a8273b816212f481458a561c40110
                 }//end while
                 i = 0;
             }//end else
@@ -68,13 +81,13 @@ public class World implements IUsable, IHitable, IInventory{
             String details = "";
             int i = 0;
             details += "Barrels:\n";
-            if(barrel.isEmpty() == true)
+            if(Barrel.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<barrel.size())
+                while(i<Barrel.size())
                 {
-                    details += (i+ ". " + barrel.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + Barrel.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
@@ -87,13 +100,13 @@ public class World implements IUsable, IHitable, IInventory{
             String details = "";
             int i = 0;
             details += "People:\n";
-            if(people.isEmpty() == true)
+            if(Person.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<people.size())
+                while(i<Person.size())
                 {
-                    details += (i+ ". " + people.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + Person.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
