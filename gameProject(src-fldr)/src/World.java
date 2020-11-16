@@ -1,12 +1,15 @@
 //Author:   Seth Gilstrap
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class World implements IUsable, IHitable, IInventory{
 
-    public ArrayList Chest = new ArrayList<>();
+   /* public ArrayList Chest = new ArrayList<>();
     public ArrayList Barrel = new ArrayList<>();
-    public ArrayList Person = new ArrayList<>();
+    public ArrayList Person = new ArrayList<>(); */
+    public ArrayList<Chest> chests = new ArrayList<>();
+    public ArrayList<Barrel> barrels = new ArrayList<>();
+    public ArrayList<Person> people = new ArrayList<>();
     public Person player;
 
 
@@ -20,22 +23,22 @@ public class World implements IUsable, IHitable, IInventory{
 
     public void makeChest()
     {
-        Chest.add(1);
+        chests.add();
     }
 
     public void makeBarrel()
     {
-        Barrel.add(1);
+        barrels.add();
     }
 
     public void makeHuman()
     {
-        Person.add(Human);
+        people.add(Human);
     }
 
     public void makeGoblin()
     {
-        Person.add(Goblin);
+        people.add(Goblin);
     }
 
     public String listChests()
@@ -44,13 +47,13 @@ public class World implements IUsable, IHitable, IInventory{
             String details = "";
             int i = 0;
             details += "Chests:\n";
-            if(Chest.isEmpty() == true)
+            if(chests.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<Chest.size())
+                while(i<chests.size())
                 {
-                    details += (i+ ". " + Chest.get(i).getEquipmentList+"\n");
+                    details += (i+ ". " + chests.get(i).getEquipmentList() +"\n");
                 }
                 i = 0;
             }//end else
@@ -64,13 +67,13 @@ public class World implements IUsable, IHitable, IInventory{
             String details = "";
             int i = 0;
             details += "Barrels:\n";
-            if(Barrel.isEmpty() == true)
+            if(barrels.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<Barrel.size())
+                while(i<barrels.size())
                 {
-                    details += (i+ ". " + Barrel.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + barrels.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
@@ -84,13 +87,13 @@ public class World implements IUsable, IHitable, IInventory{
             String details = "";
             int i = 0;
             details += "People:\n";
-            if(Person.isEmpty() == true)
+            if(people.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<Person.size())
+                while(i<people.size())
                 {
-                    details += (i+ ". " + Person.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + people.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
@@ -105,7 +108,20 @@ public class World implements IUsable, IHitable, IInventory{
 
     public String speakTo(Person person)
     {
-        return Person.thingsToSay();
+        if(person instanceof Human)
+        {
+            return ((Human) person).excited();
+        }
+
+        else if(person instanceof Goblin)
+        {
+            return ((Goblin) person).greeting();
+        }
+
+        else
+        {
+            return "That ain't a person, bro.";
+        }
     }
 
     public int attack(IHitable target)
@@ -122,13 +138,14 @@ public class World implements IUsable, IHitable, IInventory{
 
     public void transferEquipment(IInventory source, IInventory destination)
     {
-        destination.add(source);
-        source.remove
+        destination.transferAllEquipmentFrom(source);
+        //IInventory.destination().add(source);
+        //source.remove(source)
     }
 
     public String peakInside(IInventory inventory)
     {
-        return IInventory.getEquipmentList();
+        return player.getEquipmentList();
     }
 
     public String getPersonInfo(Person person)
@@ -143,7 +160,7 @@ public class World implements IUsable, IHitable, IInventory{
 
     public String listPlayerInventory()
     {
-        return player.inventory();
+        return player.getEquipmentList();
     }
 
     public boolean equipEquipment(Equipment eqmt)
