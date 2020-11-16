@@ -1,4 +1,4 @@
-public class Barrel extends Chest implements Ihitable {
+public class Barrel extends Chest implements IHitable {
     private int maxHealth;
     private int currentHealth;
 
