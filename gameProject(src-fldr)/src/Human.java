@@ -9,7 +9,7 @@
  * ---------------------------------------------------------------------------
  */
 
-public class Human extends person
+public class Human extends Person
 {
     public Human()
     {

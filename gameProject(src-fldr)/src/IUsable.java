@@ -1,6 +1,6 @@
 public interface IUsable
 {
 
-    public boolean use(person Person);
+    public boolean use(Person Person);
 
 }

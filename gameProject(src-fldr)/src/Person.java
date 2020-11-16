@@ -10,7 +10,7 @@ public abstract class Person
     private int maxHealth;
     private int currentHealth;
 
-    public person(String Name) {
+    public Person(String Name) {
 
         name= Name;
         maxHealth= 50;

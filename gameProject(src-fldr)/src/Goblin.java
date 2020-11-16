@@ -1,6 +1,6 @@
 //Author:   Seth Gilstrap
 
-public class Goblin extends person
+public class Goblin extends Person
 {
     public Goblin()
     {
