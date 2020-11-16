@@ -7,46 +7,40 @@ public class World implements IUsable, IHitable, IInventory{
     public ArrayList Chest = new ArrayList<>();
     public ArrayList Barrel = new ArrayList<>();
     public ArrayList Person = new ArrayList<>();
-    public person player;
+    public Person player;
 
 
     public World()
     {
-<<<<<<< HEAD
     makeChest();
     makeBarrel();
     makeHuman();
     makeGoblin();
-=======
-
->>>>>>> f5980222f40a8273b816212f481458a561c40110
     }
 
     public void makeChest()
     {
-<<<<<<< HEAD
         Chest.add(1);
-=======
         Chest chest1 = new Chest();
         Chest.add(chest1);
->>>>>>> f5980222f40a8273b816212f481458a561c40110
+       Chest.add(1);
     }
 
     public void makeBarrel()
     {
         Barrel.add(2);
+        Barrel.add(1);
     }
 
     public void makeHuman()
     {
-
-        Person.add(Human);
+        Person.add(1);
     }
 
     public void makeGoblin()
     {
 
-        Person.add(Goblin);
+        Person.add();
     }
 
     public String listChests()
@@ -61,14 +55,7 @@ public class World implements IUsable, IHitable, IInventory{
             {
                 while(i<Chest.size())
                 {
-<<<<<<< HEAD
-
                     details += (i+ ". " + Chest.get(i).getEquipmentList +"\n");
-                    details += (i+ ". " + chest.get(i).getEquipmentList() +"\n");
-
-=======
-                    details += (i+ ". " + Chest.get(i).getEquipmentList() +"\n");
->>>>>>> f5980222f40a8273b816212f481458a561c40110
                 }//end while
                 i = 0;
             }//end else

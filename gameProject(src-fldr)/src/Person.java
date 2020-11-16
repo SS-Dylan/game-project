@@ -1,6 +1,6 @@
 import java.util.*;
 
-public abstract class person
+public abstract class Person
 {
     private String name;
     private ArrayList<String> thingsToSay = new ArrayList();
