@@ -5,7 +5,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
- public class EquipmentDriver
+ public class GameDriver
 {
     public static void main(String[] args)
 	{ //start main method
@@ -65,7 +65,7 @@ import java.util.ArrayList;
 							EquipmentManager.addSword();
 							break;
 						case "longBow":
-							EquipmentManager.addPLongbow();
+							EquipmentManager.addLongbow();
 							break;
 						case "throwingAxe":
 							EquipmentManager.addThrowingAxe();

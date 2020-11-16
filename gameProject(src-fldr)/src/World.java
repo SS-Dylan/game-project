@@ -10,15 +10,7 @@ public class World implements IUsable, IHitable, IInventory{
     public Person player;
 
 
-    public World()
-    {
-    makeChest();
-    makeBarrel();
-    makeHuman();
-    makeGoblin();
-
-    public World()
-    {
+    public World() {
         makeChest();
         makeBarrel();
         makeHuman();
