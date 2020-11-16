@@ -11,7 +11,7 @@
  */
 
 import java.util.ArrayList;
-
+import java.util.Random;
 /**
  * Manager class for equipment and related classes.	 
  * Allows user to customize and manipulate virtual equipment.    
@@ -23,14 +23,8 @@ import java.util.ArrayList;
  */
 public class EquipmentManager
 {
-	private ArrayList<Plackart> plackarts = new ArrayList<Plackart>();
-	private ArrayList<Helmet> helmets = new ArrayList<Helmet>();
-	private ArrayList<LongBow> longBows = new ArrayList<LongBow>();
-	private ArrayList<ThrowingAxe> throwingAxes = new ArrayList<ThrowingAxe>();
-	private ArrayList<Spear> spears = new ArrayList<Spear>();
-	private ArrayList<Sword> swords = new ArrayList<Sword>();
 	private ArrayList<Equipment> equipment = new ArrayList<Equipment>();
-	
+	Random rand = new Random();
 		
 		/**
 		 * Initializes EquipmentManager object      
@@ -56,12 +50,7 @@ public class EquipmentManager
 		 */
 		public void clearAll()
 		{
-			plackarts.clear();
-			helmets.clear ( );
-			longBows.clear ( );
-			throwingAxes.clear ( );
-			spears.clear ( );
-			swords.clear ( );
+			equipment.clear();
 		}//end clearAll
 		
 		/**
@@ -75,8 +64,7 @@ public class EquipmentManager
 		 */
 		public int countEquipment()
 		{
-			return (plackarts.size() + helmets.size() + longBows.size() +
-				throwingAxes.size() + spears.size() + spears.size());
+			return equipment.size ( );
 		}//end countEquipment
 		
 		/**
@@ -90,7 +78,12 @@ public class EquipmentManager
 		 */
 		public int countArmor()
 		{
-			return (plackarts.size() + helmets.size());
+			int count = 0;
+			for(int i = 0; i < equipment.size(); i++)
+			 if(equipment.get(i).getName().contains ("Helmet") ||
+							 equipment.get(i).getName().contains ("Plackart"))
+				 count++;
+			return count;
 		}//end countArmor
 		
 		/**
@@ -104,8 +97,14 @@ public class EquipmentManager
 		 */
 		public int countWeapon()
 		{
-			return(longBows.size() +
-			throwingAxes.size() + spears.size() + spears.size());
+			int count = 0;
+			for(int i = 0; i < equipment.size(); i++)
+			 if(equipment.get(i).getName().contains ("Sword") ||
+							 equipment.get(i).getName().contains ("Spear") ||
+							 equipment.get(i).getName().contains ("LongBow") ||
+							 equipment.get(i).getName().contains ("ThrowingAxe"))
+				 count++;
+			return count;
 		}//end countWeapon
 		
 		/**
@@ -117,20 +116,9 @@ public class EquipmentManager
 		 * <hr>
 		 * @param args
 		 */
-		public void removeEquipment(String list, int index)
+		public void removeEquipment( int index)
 		{
-			if(list == "plackarts")
-				removeEquipment(plackarts, index);
-			if(list == "helmets")
-				removeEquipment(helmets, index);
-			if(list == "longBows")
-			removeEquipment(helmets, index);
-			if(list == "throwingAxes")
-			removeEquipment(helmets, index);
-			if(list == "swords")
-				swords.remove (index);
-			if(list == "spears")
-				spears.remove (index);
+			equipment.remove (index);
 		}//end removeEquipment
 		
 		/**
@@ -142,38 +130,9 @@ public class EquipmentManager
 		 * <hr>
 		 * @param args
 		 */
-		public void getEquipmentDetails(String list, int index)
+		public void getEquipmentDetails(int index)
 		{
-			if(list == "plackarts")
-			{	
-				Plackart p = plackarts.get(index);
-				System.out.println(p.toString ( ));
-			}// end if
-			if(list == "helmets")
-			{	
-				Helmet h = helmets.get (index);
-				System.out.println(h.toString ( ));
-			}// end if
-			if(list == "longBows")
-			{
-				LongBow l = longBows.get (index);
-				System.out.println(l.toString ( ));
-			}// end if
-			if(list == "throwingAxes")
-			{
-				ThrowingAxe t = throwingAxes.get (index);
-				System.out.println(t.toString());
-			}// end if
-			if(list == "swords")
-			{
-				Sword s = swords.get (index);
-				System.out.println(s.toString ( ));
-			}// end if
-			if(list == "spears")
-			{
-				Spear s = spears.get (index);
-				System.out.println(s.toString ( ));
-			}// end if
+			System.out.println(equipment.get(index).toString());
 		}//end getEquipmentDetails
 		
 		/**
@@ -190,236 +149,61 @@ public class EquipmentManager
 		{
 			String details = "";
 			int i = 0;
-			details += "Plackarts:\n";
-			if(plackarts.isEmpty() == true)
+			details += "Equipment:\n";
+			if(equipment.isEmpty() == true)
 				details += "<<empty>>\n";
 			else
 			{
-				while(i<plackarts.size())
+				while(i<equipment.size())
 				{
-					details += (i+ ". " + plackarts.get(i).toString() +"\n");
+					details += (i+ ". " + equipment.get(i).toString() +"\n");
 				}
 				i = 0;
 			}//end else
-			if(helmets.isEmpty() == true)
-				details += "<<empty>>\n";
-			else
-			{
-				while(i<helmets.size())
-				{
-					details += (i+ ". " + helmets.get(i).toString() +"\n");
-				}
-				i = 0;
-			}//end else
-			if(longBows.isEmpty() == true)
-				details += "<<empty>>\n";
-			else
-			{
-				while(i<longBows.size())
-				{
-					details += (i+ ". " + longBows.get(i).toString() +"\n");
-				}//end while
-				i = 0;
-			}//end else
-			if(throwingAxes.isEmpty() == true)
-				details += "<<empty>>\n";
-			else
-			{
-				while(i<throwingAxes.size())
-				{
-					details += (i+ ". " + throwingAxes.get(i).toString() +"\n");
-				}//end while
-				i = 0;
-			}//end else
-			if(spears.isEmpty() == true)
-				details += "<<empty>>\n";
-			else
-			{
-				while(i<spears.size())
-				{
-					details += (i+ ". " + spears.get(i).toString() +"\n");
-				}//end while
-				i = 0;
-			}//end else
-			if(swords.isEmpty() == true)
-				details += "<<empty>>\n";
-			else
-			{
-				while(i<swords.size())
-				{
-					details += (i+ ". " + swords.get(i).toString() +"\n");
-				}//end while
-				i = 0;
-			}//end else
+			
 			return details;
 		}//end getEquipmentListDetails
-		
-		/**
-		 * Returns a formatted string with all the names from the contained
-		 * elements in the arraylists of the equipmentmanager     
-		 *
-		 * <hr>
-		 * Date created: Oct 14, 2020
-		 *
-		 * <hr>
-		 * @param args
-		 */
-		public String getEquipmentList()
+		public Weapon createRandomWeapon()
 		{
+			Weapon randomWeapon;
+			int id = rand.nextInt(4);
+			switch(id)
 			{
-				String details = "";
-				int i = 0;
-				details += "Plackarts:\n";
-				if(plackarts.isEmpty() == true)
-					details += "<<empty>>\n";
-				else
-				{
-					while(i<plackarts.size())
-					{
-						details += (i+ ". " + plackarts.get(i).getName() +"\n");
-					}//end while
-					i = 0;
-				}//end else
-				if(helmets.isEmpty() == true)
-					details += "<<empty>>\n";
-				else
-				{
-					while(i<helmets.size())
-					{
-						details += (i+ ". " + helmets.get(i).getName() +"\n");
-					}//end while
-					i = 0;
-				}//end else
-				if(longBows.isEmpty() == true)
-					details += "<<empty>>\n";
-				else
-				{
-					while(i<longBows.size())
-					{
-						details += (i+ ". " + longBows.get(i).getName() +"\n");
-					}//end while
-					i = 0;
-				}//end else
-				if(throwingAxes.isEmpty() == true)
-					details += "<<empty>>\n";
-				else
-				{
-					while(i<throwingAxes.size())
-					{
-						details += (i+ ". " + throwingAxes.get(i).getName() +"\n");
-					}//end while
-					i = 0;
-				}//end else
-				if(spears.isEmpty() == true)
-					details += "<<empty>>\n";
-				else
-				{
-					while(i<spears.size())
-					{
-						details += (i+ ". " + spears.get(i).getName() +"\n");
-					}//end while
-					i = 0;
-				}//end else
-				if(swords.isEmpty() == true)
-					details += "<<empty>>\n";
-				else
-				{
-					while(i<swords.size())
-					{
-						details += (i+ ". " + swords.get(i).getName() +"\n");
-					}//end while
-					i = 0;
-				}//end else
-				return details;
+				case 0:
+					Sword w = new Sword();
+					return w;
+				case 1:
+					Spear p = new Spear();
+					return p;
+				case 2:
+					LongBow b = new LongBow();
+					return b;
+				case 3:
+					ThrowingAxe t = new ThrowingAxe();
+					return t;
+				default:
+					break;
 			}
-		}//end getEquipmentList
-		
-		/**
-		 * adds plackart object to end of plackarts arraylist       
-		 *
-		 * <hr>
-		 * Date created: Oct 14, 2020
-		 *
-		 * <hr>
-		 * @param args
-		 */
-		public void addPlackart(Plackart p)
-		{
-			plackarts.add (p);
-		}//end addPlackart
-		
-		/**
-		 * adds helmet object to the end of helmets arraylist        
-		 *
-		 * <hr>
-		 * Date created: Oct 14, 2020
-		 *
-		 * <hr>
-		 * @param args
-		 */
-		public void addHelmet(Helmet h)
-		{
-			helmets.add (h);
-		}//end addHelmet
-		
-		/**
-		 * adds longbow object to end of arraylist       
-		 *
-		 * <hr>
-		 * Date created: Oct 14, 2020
-		 *
-		 * <hr>
-		 * @param args
-		 */
-		public void addLongBow(LongBow b)
-		{
-			longBows.add (b);
-		}//end addLongBow
-		
-		/**
-		 * adds spear to end of spears arraylist       
-		 *
-		 * <hr>
-		 * Date created: Oct 14, 2020
-		 *
-		 * <hr>
-		 * @param args
-		 */
-		public void addSpear(Spear s)
-		{
-			spears.add (s);
-		}//end addSpear
-		
-		/**
-		 * adds sword to end of swords arraylist        
-		 *
-		 * <hr>
-		 * Date created: Oct 14, 2020
-		 *
-		 * <hr>
-		 * @param args
-		 */
-		public void addSword(Sword s)
-		{
-			swords.add (s);
-		}//end addSword
-
-		public void addThrowingAxe(ThrowingAxe a)
-		{
-			throwingAxes.add (a);
 		}
 		
-		/**
-		 * Enter method description here         
-		 *
-		 * <hr>
-		 * Date created: Oct 14, 2020
-		 *
-		 * <hr>
-		 * @param args
-		 */
-		private void removeEquipment(ArrayList list, int index)	//removeEquipment implemented by Seth and Torrey
+		public Armor createRandomArmor()
 		{
-			list.remove(index);
-		}//end removeEquipment
+			int id = rand.nextInt(2);
+			switch(id)
+			{
+				case 0:
+					Plackart p = new Plackart();
+					return p;
+				case 1:
+					Helmet h = new Helmet();
+					return h;
+				default:
+					break;
+			}
+		}
+		public Consumable createRandomConsumable()
+		{
+			HealthKit hk = new HealthKit();
+			return hk;
+		}
 }//end EquipmentManager.java
