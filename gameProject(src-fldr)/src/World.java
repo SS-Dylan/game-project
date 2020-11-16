@@ -12,15 +12,12 @@ public class World implements IUsable, IHitable, IInventory{
     public World()
     {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1c8b79ce798f462662198498a19f9eb534222f69
     }
 
     public void makeChest()
     {
-
+        Chest chest1 = new Chest();
+        Chest.add(chest1);
     }
 
     public void makeBarrel()
@@ -30,10 +27,7 @@ public class World implements IUsable, IHitable, IInventory{
 
     public void makeHuman()
     {
-<<<<<<< HEAD
-=======
 
->>>>>>> 1c8b79ce798f462662198498a19f9eb534222f69
         Person.add(Human);
     }
 
@@ -49,13 +43,13 @@ public class World implements IUsable, IHitable, IInventory{
             String details = "";
             int i = 0;
             details += "Chests:\n";
-            if(chest.isEmpty() == true)
+            if(Chest.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<chest.size())
+                while(i<Chest.size())
                 {
-                    details += (i+ ". " + chest.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + Chest.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
@@ -68,13 +62,13 @@ public class World implements IUsable, IHitable, IInventory{
             String details = "";
             int i = 0;
             details += "Barrels:\n";
-            if(barrel.isEmpty() == true)
+            if(Barrel.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<barrel.size())
+                while(i<Barrel.size())
                 {
-                    details += (i+ ". " + barrel.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + Barrel.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
@@ -87,13 +81,13 @@ public class World implements IUsable, IHitable, IInventory{
             String details = "";
             int i = 0;
             details += "People:\n";
-            if(people.isEmpty() == true)
+            if(Person.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<people.size())
+                while(i<Person.size())
                 {
-                    details += (i+ ". " + people.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + Person.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
