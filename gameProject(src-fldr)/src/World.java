@@ -12,6 +12,10 @@ public class World implements IUsable, IHitable, IInventory{
     public World()
     {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1c8b79ce798f462662198498a19f9eb534222f69
     }
 
     public void makeChest()
@@ -26,13 +30,17 @@ public class World implements IUsable, IHitable, IInventory{
 
     public void makeHuman()
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1c8b79ce798f462662198498a19f9eb534222f69
         Person.add(Human);
     }
 
     public void makeGoblin()
     {
 
-        Person.add(goblin);
+        Person.add(Goblin);
     }
 
     public String listChests()
