@@ -1,9 +1,10 @@
-public interface IHitable
+public interface Ihitable
 {
-    public int getMaxHealth();
-    public int getCurrentHealth();
-    public boolean isHitableDestroyed();
-    public int takeDamage(int dmg, int fire, int ice);
-    public int heal(int amt);
-
+    int maxHealth = 50;
+    int currentHealth= 40;
+    int getMaxHealth();
+    int getCurrentHealth();
+    boolean isHitableDestroyed();
+    int takeDamage(int dmg, int fire, int ice);
+    int heal(int amt);
 }

@@ -28,7 +28,7 @@
  * <hr>
  * @author Dylan Zelasko
  */
-public class Weapon extends Equipment
+public class Weapon extends Equipment implements IUsable
 {
 	private int normalDamage;
 	private int iceDamage;
@@ -42,7 +42,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public Weapon(String name, int dmg, int ice, int fire, WeaponHandedness wp)
 	{
@@ -61,7 +61,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public String getName()
 	{
@@ -84,7 +84,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public int getNormalDamage()
 	{
@@ -98,7 +98,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public int getIceDamage()
 	{
@@ -112,7 +112,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public int getFireDamage()
 	{
@@ -126,7 +126,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public WeaponHandedness getWeaponHandedness()
 	{
@@ -140,7 +140,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void setNormalDamage(int dmg)
 	{
@@ -154,7 +154,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void setIceDamage(int dmg)
 	{
@@ -168,7 +168,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void setFireDamage(int dmg)
 	{
@@ -182,7 +182,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void setWeaponHandedness(WeaponHandedness wp)
 	{
@@ -196,7 +196,7 @@ public class Weapon extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public String toString()
 	{
@@ -207,4 +207,13 @@ public class Weapon extends Equipment
 					", weaponHandedness:\"" + weaponhand +
 					"\"}");
 	}//end toString
+
+	@Override
+	public boolean use(Person person) {
+		return false;
+	}
+	public int attack(Ihitable hitable)
+	{
+		return hitable.takeDamage(getNormalDamage(),getFireDamage(),getIceDamage());
+	}
 }//end Weapon.java
