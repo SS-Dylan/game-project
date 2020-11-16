@@ -1,7 +1,7 @@
 import java.lang.invoke.StringConcatFactory;
 import java.util.ArrayList;
 
-public abstract class Person implements IInventory, Ihitable {
+public abstract class Person implements IInventory, IHitable {
     private String name;
     private ArrayList<String> thingsToSay = new ArrayList();
     private Helmet helmet;
@@ -14,8 +14,8 @@ public abstract class Person implements IInventory, Ihitable {
     public Person(String Name) {
 
         name= Name;
-        maxHealth= Ihitable.maxHealth;
-        currentHealth =Ihitable.currentHealth;
+        maxHealth= IHitable.maxHealth;
+        currentHealth =IHitable.currentHealth;
     }
 
     public String saySomething()
