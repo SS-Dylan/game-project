@@ -116,7 +116,8 @@ import java.util.ArrayList;
 						}
 					case "Manage":
 							System.out.println("List of available commands:");
-							System.out.println("list people\nlist barrels\nlookAt person #\nspeakTo person #\n");
+							System.out.println("list people, list barrels, lookAt person, speakTo person, my info, my inventory, ");
+							System.out.println("use, attack, transfer");
 							break;
 				}
 			/* Default error message for case switch */
