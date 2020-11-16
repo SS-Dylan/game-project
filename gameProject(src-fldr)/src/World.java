@@ -1,40 +1,22 @@
-<<<<<<< HEAD
-=======
 //Author:   Seth Gilstrap
 
->>>>>>> 2a852b61294ac4d29313f456e81dabc3b5e2ccc8
 import java.util.ArrayList;
 
-public class World {
+public class World implements IUsable, IHitable, IInventory{
 
     public ArrayList Chest = new ArrayList<>();
-    public ArrayList Barrel  = new ArrayList<>();
+    public ArrayList Barrel = new ArrayList<>();
     public ArrayList Person = new ArrayList<>();
-
-
+    public person player;
 
     public World()
     {
-<<<<<<< HEAD
 
-=======
-        chest0 = new chest;
-        chest1 = new chest;
-        chest2 = new chest;
-        barrel0 = new barrel;
-        barrel1 = new barrel;
-        barrel2 = new barrel;
-        goblin0 = new person;
-        goblin1 = new person;
-        goblin2 = new person;
-        human0 = new person;
->>>>>>> 2a852b61294ac4d29313f456e81dabc3b5e2ccc8
     }
 
     public void makeChest()
     {
 
-        Chest.add(Chest);
     }
 
     public void makeBarrel()
@@ -44,8 +26,7 @@ public class World {
 
     public void makeHuman()
     {
-
-        Person.add(Person);
+        Person.add(Human);
     }
 
     public void makeGoblin()
@@ -60,13 +41,13 @@ public class World {
             String details = "";
             int i = 0;
             details += "Chests:\n";
-            if(Chest.isEmpty() == true)
+            if(chest.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<Chest.size())
+                while(i<chest.size())
                 {
-                    details += (i+ ". " + Chest.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + chest.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
@@ -79,13 +60,13 @@ public class World {
             String details = "";
             int i = 0;
             details += "Barrels:\n";
-            if(Barrel.isEmpty() == true)
+            if(barrel.isEmpty() == true)
                 details += "<<empty>>\n";
             else
             {
-                while(i<Barrel.size())
+                while(i<barrel.size())
                 {
-                    details += (i+ ". " + Barrel.get(i).getEquipmentList() +"\n");
+                    details += (i+ ". " + barrel.get(i).getEquipmentList() +"\n");
                 }//end while
                 i = 0;
             }//end else
@@ -154,11 +135,12 @@ public class World {
 
     public String listPlayerInventory()
     {
-
+        return IInventory.get(player);
     }
 
     public boolean equipEquipment(Equipment eqmt)
     {
+        inventory.remove(eqmt);
 
     }
 
