@@ -42,6 +42,11 @@ public class Chest implements IInventory, IUsable
     }
 
     @Override
+    public void getEquipmentInfo(String list, int index) {
+
+    }
+
+    @Override
     public String getEquipmentInfo(int index) {
         return null;
     }
@@ -53,6 +58,11 @@ public class Chest implements IInventory, IUsable
 
     @Override
     public void dropEquipment(int index) {
+
+    }
+
+    @Override
+    public void dropAllEquipment() {
 
     }
 
