@@ -33,7 +33,7 @@ public class Ranged extends Weapon
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public Ranged(String name, int dmg, int ice, int fire, double rng, int max)
 	{
@@ -50,7 +50,7 @@ public class Ranged extends Weapon
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public double getRange()
 	{
@@ -64,7 +64,7 @@ public class Ranged extends Weapon
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public int getAmmo()
 	{
@@ -78,7 +78,7 @@ public class Ranged extends Weapon
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public int getMaxAmmo()
 	{
@@ -92,7 +92,7 @@ public class Ranged extends Weapon
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void setRange(int rng)
 	{
@@ -107,7 +107,7 @@ public class Ranged extends Weapon
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public int addAmmo(int a)
 	{
@@ -125,7 +125,7 @@ public class Ranged extends Weapon
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public String toString()
 	{

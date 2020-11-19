@@ -33,7 +33,7 @@ public class EquipmentManager
 		 * Date created: Oct 14, 2020
 		 *
 		 * <hr>
-		 * @param args
+		 * @param
 		 */
 		
 		EquipmentManager equipmentManager = new EquipmentManager();
@@ -46,7 +46,7 @@ public class EquipmentManager
 		 * Date created: Oct 14, 2020
 		 *
 		 * <hr>
-		 * @param args
+		 * @param
 		 */
 		public void clearAll()
 		{
@@ -60,7 +60,7 @@ public class EquipmentManager
 		 * Date created: Oct 14, 2020
 		 *
 		 * <hr>
-		 * @param args
+		 * @param
 		 */
 		public int countEquipment()
 		{
@@ -74,7 +74,7 @@ public class EquipmentManager
 		 * Date created: Oct 14, 2020
 		 *
 		 * <hr>
-		 * @param args
+		 * @param
 		 */
 		public int countArmor()
 		{
@@ -93,7 +93,7 @@ public class EquipmentManager
 		 * Date created: Oct 14, 2020
 		 *
 		 * <hr>
-		 * @param args
+		 * @param
 		 */
 		public int countWeapon()
 		{
@@ -106,6 +106,11 @@ public class EquipmentManager
 				 count++;
 			return count;
 		}//end countWeapon
+
+		public void addEquipment(Equipment e)
+		{
+			equipment.add(e);
+		}
 		
 		/**
 		 * removes a specific element from a specified arraylist       
@@ -114,7 +119,7 @@ public class EquipmentManager
 		 * Date created: Oct 14, 2020
 		 *
 		 * <hr>
-		 * @param args
+		 * @param
 		 */
 		public void removeEquipment( int index)
 		{
@@ -128,7 +133,7 @@ public class EquipmentManager
 		 * Date created: Oct 14, 2020
 		 *
 		 * <hr>
-		 * @param args
+		 * @param
 		 */
 		public void getEquipmentDetails(int index)
 		{
@@ -143,7 +148,7 @@ public class EquipmentManager
 		 * Date created: Oct 14, 2020
 		 *
 		 * <hr>
-		 * @param args
+		 * @param
 		 */
 		public String getEquipmentListDetails()
 		{
@@ -163,6 +168,7 @@ public class EquipmentManager
 			
 			return details;
 		}//end getEquipmentListDetails
+
 		public Weapon createRandomWeapon()
 		{
 			Weapon randomWeapon;
@@ -178,11 +184,9 @@ public class EquipmentManager
 				case 2:
 					LongBow b = new LongBow();
 					return b;
-				case 3:
+				default:
 					ThrowingAxe t = new ThrowingAxe();
 					return t;
-				default:
-					break;
 			}
 		}
 		
@@ -194,16 +198,14 @@ public class EquipmentManager
 				case 0:
 					Plackart p = new Plackart();
 					return p;
-				case 1:
+				default:
 					Helmet h = new Helmet();
 					return h;
-				default:
-					break;
 			}
 		}
 		public Consumable createRandomConsumable()
 		{
-			HealthKit hk = new HealthKit();
+			HealthKit hk = new HealthKit("HealthKit", 50, 50);
 			return hk;
 		}
 }//end EquipmentManager.java

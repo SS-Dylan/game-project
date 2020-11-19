@@ -27,7 +27,7 @@ public class Helmet extends Armor
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	Helmet()
 	{

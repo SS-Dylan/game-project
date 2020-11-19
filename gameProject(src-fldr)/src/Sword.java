@@ -28,7 +28,7 @@ public class Sword extends Weapon
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public Sword()
 	{

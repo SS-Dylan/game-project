@@ -22,7 +22,7 @@ public class Armor extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public Armor(int newArmorBonus, boolean ice, boolean fire)
 	{
@@ -39,7 +39,7 @@ public class Armor extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public String getName()
 	{
@@ -60,7 +60,7 @@ public class Armor extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public int getArmorBonus()
 	{
@@ -74,7 +74,7 @@ public class Armor extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public boolean hasIceProtection()
 	{
@@ -88,7 +88,7 @@ public class Armor extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public boolean hasFireProtection()
 	{
@@ -102,7 +102,7 @@ public class Armor extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void activateIceProtection()
 	{
@@ -116,7 +116,7 @@ public class Armor extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void activateFireProtection()
 	{
@@ -130,7 +130,7 @@ public class Armor extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void deactivateIceProtection()
 	{
@@ -144,7 +144,7 @@ public class Armor extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void deactivateFireProtection()
 	{
@@ -158,7 +158,7 @@ public class Armor extends Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public String toString()
 	{

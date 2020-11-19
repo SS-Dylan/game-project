@@ -34,7 +34,7 @@ public class Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public Equipment(String newName, int newPrice, double newDurability)
 	{
@@ -50,7 +50,7 @@ public class Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 * @return 
 	 */
 	public String getName()
@@ -65,7 +65,7 @@ public class Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public int getPrice()
 	{
@@ -79,7 +79,7 @@ public class Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public double getDurability()
 	{
@@ -93,7 +93,7 @@ public class Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public String getDurabilityStatus()
 	{
@@ -116,7 +116,7 @@ public class Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void setName(String newName)
 	{
@@ -130,7 +130,7 @@ public class Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void setPrice(int newPrice)
 	{
@@ -144,7 +144,7 @@ public class Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public void setDurability(double newDurability)
 	{
@@ -158,7 +158,7 @@ public class Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	public int getSalePrice()
 	{
@@ -174,8 +174,9 @@ public class Equipment
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
+
 	public void adjustDurability(int adjustment)
 	{
 		if(adjustment <= 1 && adjustment >= -1)

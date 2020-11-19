@@ -69,6 +69,11 @@ public abstract class Person implements IInventory, IHitable {
         return name;
     }
 
+    public Weapon getWeapon()
+    {
+        return weapon;
+    }
+
     public String toString(){
 
         String helmetName;

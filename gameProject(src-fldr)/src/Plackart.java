@@ -28,7 +28,7 @@ public class Plackart extends Armor
 	 * Date created: Oct 14, 2020
 	 *
 	 * <hr>
-	 * @param args
+	 * @param
 	 */
 	Plackart()
 	{

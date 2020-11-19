@@ -16,29 +16,35 @@ public class World implements IUsable, IHitable, IInventory{
     public World()
     {
         makeChest();
+        makeChest();
+        makeChest();
         makeBarrel();
-        makeHuman();
+        makeBarrel();
+        makeBarrel();
         makeGoblin();
+        makeGoblin();
+        makeGoblin();
+        makeHuman();
     }
 
     public void makeChest()
     {
-        chests.add();
+        chests.add(new Chest());
     }
 
     public void makeBarrel()
     {
-        barrels.add();
+        barrels.add(new Barrel());
     }
 
     public void makeHuman()
     {
-        people.add(Human);
+        people.add(new Human());
     }
 
     public void makeGoblin()
     {
-        people.add(Goblin);
+        people.add(new Goblin());
     }
 
     public String listChests()
@@ -127,11 +133,11 @@ public class World implements IUsable, IHitable, IInventory{
     public int attack(IHitable target)
     {
         int damage = 0;
-        if(player.weapon() == null)
+        if(player.getWeapon() == null)
             System.out.println("No weapon equipped!");
         else
         {
-            damage = target.takeDamage();
+            damage = player.attack(target);
         }
         return damage;
     }
@@ -166,15 +172,17 @@ public class World implements IUsable, IHitable, IInventory{
     public boolean equipEquipment(Equipment eqmt)
     {
         boolean equipped = true;
-        player.inventory().remove(eqmt);
-        player.weapon().add(eqmt);
+        player.equip(eqmt);
         return equipped;
     }
 
     public boolean useEquipment(Equipment eqmt, Person target)
     {
         boolean used = true;
-        eqmt.use(target);
+        //player.getEquipment(eqmt).use(target); getEquipment calls for an index, not a String
+        //eqmt.use(target); No use method for the Equipment class. Maybe we need to make one? Not on UML.
+        //.use(target) The parameter of the use method should be target, but how does eqmt relate?
+        IUsable.use(target);
         return used;
     }
 

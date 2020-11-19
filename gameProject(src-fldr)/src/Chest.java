@@ -3,8 +3,8 @@ public class Chest implements IInventory, IUsable
     EquipmentManager inventory;
 
     public Chest(){
-        inventory.addHelmet(new Helmet());
-        inventory.addSword(new Sword());
+        inventory.addEquipment(new Helmet());
+        inventory.addEquipment(new Sword());
     }
     @Override
     public void pickup(Equipment equipment) {
@@ -46,7 +46,7 @@ public class Chest implements IInventory, IUsable
 
     }
 
-    @Override
+
     public String getEquipmentInfo(int index) {
         return null;
     }
@@ -66,7 +66,7 @@ public class Chest implements IInventory, IUsable
 
     }
 
-    @Override
+
     public void dropAllEquipments() {
 
     }
