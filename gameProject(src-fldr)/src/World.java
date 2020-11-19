@@ -179,6 +179,14 @@ public class World implements IUsable, IHitable, IInventory{
     public boolean useEquipment(Equipment eqmt, Person target)
     {
         boolean used = true;
+        if(eqmt instanceof Armor)
+        {
+            Armor.use(eqmt);
+        }
+        else if(eqmt instanceof Weapon)
+        {
+            player.geE().use(target);
+        }
         //player.getEquipment(eqmt).use(target); getEquipment calls for an index, not a String
         //eqmt.use(target); No use method for the Equipment class. Maybe we need to make one? Not on UML.
         //.use(target) The parameter of the use method should be target, but how does eqmt relate?

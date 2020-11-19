@@ -165,4 +165,11 @@ public class Armor extends Equipment
 		return ("{name:\"" + getName() + "\" , price:" + getPrice() + "durability:\"" + getDurabilityStatus() +
 						"ice:" + iceProtection +", fire:" + fireProtection +"}");
 	}//end toString
+
+	public boolean use(Armor armor)
+	{
+		boolean equipped = true;
+		player.equip(armor);
+		return equipped;
+	}
 }//end Armor.java

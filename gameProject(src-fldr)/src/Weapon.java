@@ -210,10 +210,22 @@ public class Weapon extends Equipment implements IUsable
 
 	@Override
 	public boolean use(Person person) {
-		return false;
+		boolean hit = false;
+		attack(person);
+		if(person.isHitableDestroyed() == true)
+		{
+			hit = true;
+			return hit;
+		}
+		else
+		{
+			return hit;
+		}
 	}
+
 	public int attack(IHitable hitable)
 	{
 		return hitable.takeDamage(getNormalDamage(),getFireDamage(),getIceDamage());
 	}
+
 }//end Weapon.java
