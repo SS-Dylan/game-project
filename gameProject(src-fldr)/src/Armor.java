@@ -169,7 +169,7 @@ public class Armor extends Equipment
 	public boolean use(Armor armor)
 	{
 		boolean equipped = true;
-		player.equip(armor);
+		//player.equip(armor); Could not figure out why it would not recognize the call to player
 		return equipped;
 	}
 }//end Armor.java

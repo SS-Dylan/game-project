@@ -181,11 +181,13 @@ public class World implements IUsable, IHitable, IInventory{
         boolean used = true;
         if(eqmt instanceof Armor)
         {
-            Armor.use(eqmt);
+            target.equip(eqmt);
+            //((Armor) eqmt).use(target);
+            //target.equip(eqmt); //Could not create a way to use Armor's use method
         }
         else if(eqmt instanceof Weapon)
         {
-            player.geE().use(target);
+            ((Weapon) eqmt).use(target);
         }
         //player.getEquipment(eqmt).use(target); getEquipment calls for an index, not a String
         //eqmt.use(target); No use method for the Equipment class. Maybe we need to make one? Not on UML.
