@@ -7,12 +7,33 @@ public class Player {
     private int currentExp;
     private Person playerPerson;
 
+
+
+    public String getPlayerName()
+    {
+
+        return playerName;
+    }
+
+    public int getPlayerAge()
+    {
+        return age;
+    }
+
+    public Race getPlayerRace()
+    {
+        return playerRace;
+    }
+
     public int getPlayerLevel()
     {
         return playerLevel;
     }
 
-
+    public int getCurrentExp()
+    {
+        return currentExp;
+    }
 
 
 
