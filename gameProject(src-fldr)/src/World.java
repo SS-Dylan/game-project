@@ -286,4 +286,94 @@ public class World implements IUsable, IHitable, IInventory{
     public boolean use(Person person) {
         return false;
     }
+
+    @Override
+    public int getMaxHealth() {
+        return 0;
+    }
+
+    @Override
+    public int getCurrentHealth() {
+        return 0;
+    }
+
+    @Override
+    public boolean isHitableDestroyed() {
+        return false;
+    }
+
+    @Override
+    public int takeDamage(int dmg, int fire, int ice) {
+        return 0;
+    }
+
+    @Override
+    public int heal(int amt) {
+        return 0;
+    }
+
+    @Override
+    public void pickup(Equipment equipment) {
+
+    }
+
+    @Override
+    public void transferAllEquipmentFrom(IInventory other) {
+
+    }
+
+    @Override
+    public int countArmor() {
+        return 0;
+    }
+
+    @Override
+    public int countWeapon() {
+        return 0;
+    }
+
+    @Override
+    public int countConsumables() {
+        return 0;
+    }
+
+    @Override
+    public int countEquipment() {
+        return 0;
+    }
+
+    @Override
+    public String getEquipmentList() {
+        return null;
+    }
+
+    @Override
+    public void getEquipmentInfo(String list, int index) {
+
+    }
+
+    @Override
+    public Equipment getEquipment(int index) {
+        return null;
+    }
+
+    @Override
+    public void dropEquipment(int index) {
+
+    }
+
+    @Override
+    public void dropAllEquipment() {
+
+    }
+
+    @Override
+    public void addEquipment(Equipment equipment) {
+
+    }
+
+    @Override
+    public boolean use(Person person) {
+        return false;
+    }
 }
