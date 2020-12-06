@@ -5,10 +5,10 @@
 
 public class LevelManager{
 
-    public void levelUp() {
-        if (getExp() == 100) {
-            playerLevel++;
-        } else if (currentExp == < 100) {
+    public void levelUp() { //Not fully sure on this one
+        if (getExp() == 100) { //Add a level up method to player?
+            Player.getPlayerLevel++;
+        } else if (getExp() <= 100) {
             playerLevel = getPlayerLevel;
         }
     }
