@@ -2,7 +2,6 @@
  * Dylan Shaffer
  * CSCI 1260-901
  */
-//import java.util.ArrayList;
 
 public class GameMap {
     private String[][] rooms = {
