@@ -53,10 +53,10 @@ public class Room {
 
     public String trap()
     {
-
+        
     }
 
-    public String getPeople()
+    public Array[] getPeople()
     {
         return enemy;
     }
