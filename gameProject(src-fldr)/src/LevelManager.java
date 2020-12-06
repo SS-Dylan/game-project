@@ -3,7 +3,7 @@
  * CSCI 1260-901
  */
 
-public class LevelManager Player {
+public class LevelManager{
 
     public void levelUp() {
         if (getExp() == 100) {
