@@ -33,7 +33,7 @@ public class Weapon extends Equipment implements IUsable
 	private int normalDamage;
 	private int iceDamage;
 	private int fireDamage;
-	WeaponHandedness weaponhand;
+	WeaponHandedness weaponHand;
 	
 	/**
 	 * Paramterized constructor for weapon        
@@ -50,7 +50,7 @@ public class Weapon extends Equipment implements IUsable
 		normalDamage = dmg;
 		iceDamage = ice;
 		fireDamage = fire;
-		weaponhand = wp;
+		weaponHand = wp;
 	}//end Weapon
 	
 	/**
@@ -130,7 +130,7 @@ public class Weapon extends Equipment implements IUsable
 	 */
 	public WeaponHandedness getWeaponHandedness()
 	{
-		return weaponhand;
+		return weaponHand;
 	}//end
 	
 	/**
@@ -157,7 +157,7 @@ public class Weapon extends Equipment implements IUsable
 	 * @param
 	 * @return
 	 */
-	public Race setIceDamage(int dmg)
+	public void setIceDamage(int dmg)
 	{
 		iceDamage = dmg;
 	}//end setIceDamage
@@ -187,7 +187,7 @@ public class Weapon extends Equipment implements IUsable
 	 */
 	public void setWeaponHandedness(WeaponHandedness wp)
 	{
-		weaponhand = wp;
+		weaponHand = wp;
 	}//end setWeaponHandedness
 	
 	/**
@@ -205,7 +205,7 @@ public class Weapon extends Equipment implements IUsable
 					", durability:\"" + getDurabilityStatus() + 
 					", normal:" + normalDamage+ ", ice:" +
 					iceDamage + ", fire:" + fireDamage + 
-					", weaponHandedness:\"" + weaponhand +
+					", weaponHandedness:\"" + weaponHand +
 					"\"}");
 	}//end toString
 
