@@ -2,7 +2,6 @@
  * Dylan Shaffer
  * CSCI 1260-901
  */
-//import java.util.ArrayList;
 
 public class GameMap {
     private String[][] rooms = {
@@ -24,10 +23,12 @@ public class GameMap {
     }
 
     Public changeRoom() {  //Not fully sure what to do on this one
-
+        return "";
     }
 
     public String getRoomDescription() {
-        return Room.getDescription();
+        String description;
+        Room.getDescription() = description;
+        return description;
     }
 }
