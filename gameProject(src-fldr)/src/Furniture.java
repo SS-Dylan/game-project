@@ -4,7 +4,7 @@
 
  */
 
-public abstract class Furniture implements IHitable{
+public abstract class Furniture implements IHitable{        //This is abstract.  I think we need a furniture manager to be abstract.
 
     private String name;
     private int value;
@@ -45,7 +45,7 @@ public abstract class Furniture implements IHitable{
 
     public String sellFurniture(Furniture target)          //This should probably have a way to add gold to inventory. This is just a message.
     {
-        String sold = "This thing is worhtless!";
+        String sold = "This thing is worthless!";
         if(target.value < 0)
         {
             return sold;
@@ -60,7 +60,7 @@ public abstract class Furniture implements IHitable{
 
     public String furnitureAttack(Furniture weapon, Person target)
     {
-        target.takeDamage(int dmg, int fire, int ice);
-
+        //target.takeDamage(int dmg, int fire, int ice);
+        
     }
 }

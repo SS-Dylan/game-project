@@ -27,7 +27,23 @@ public class Room {
 
     public String lightLevel()
     {
+        String light = "This room is too dark to see.";
+        if(lightLevel == 1)
+        {
+            return light;
+        }
+        else if(lightLevel == 2)
+        {
+            light = "This room is rather dim.";
+            return light;
+        }
 
+        else if (lightLevel > 2)
+        {
+            light = "This room is well lit.";
+            return light;
+        }
+        return light;
     }
 
     public int getLightLevel()
@@ -42,15 +58,22 @@ public class Room {
 
     public String getPeople()
     {
-
+        return enemy;
     }
 
     public String getFurniture()            //??? 
     {
-        for(int i = 0; i <= roomFurniture.length; i++)
+        String furniture = "There is no furniture in this room.";
+        if(lightLevel > 1)
         {
-            if (roomFurniture.equals())
+            for(int i = 0; i <= roomFurniture.length; i++)
+            {
+               // System.out.println(roomFurniture[1]);
+                furniture = roomFurniture[i];
+                return furniture +;
+            }
         }
+
     }
 
     public String getTraps()

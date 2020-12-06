@@ -27,179 +27,73 @@ public abstract class RaceManager extends Weapon implements IHitable
         super(name, dmg, ice, fire, wp);
     }
 
+    public void alterWeaponDamage(Race race)
+{
 
 
-public void alterDamage(Race race)
+}
+
+public void alterFireDamage(Race race)
+{
+
+
+}
+
+public void alterIceDamage(Race race)
 {
     {
         if(race.equals(Race.HUMAN))
         {
-            takeDamage(3,10,4);
+            takeDamage(4, 10, 4);
         }
         if(race.equals(Race.GOBLIN))
         {
-            takeDamage(7,4,4);
+            setIceDamage(7);
         }
 
         if(race.equals(Race.ORC))
         {
-            takeDamage(4,5,10);
+            setIceDamage(5);
         }
 
         if(race.equals(Race.ELF))
         {
-            takeDamage(7,2,2);
+            setIceDamage(2);
         }
 
         if(race.equals(Race.DWARF))
         {
-            takeDamage(5,7,3);
+            setIceDamage(6);
         }
 
-       if(race.equals(Race.MANDOLORIAN))
+       else if(race.equals(Race.MANDOLORIAN))
         {
-            takeDamage(1,3,3);
+            setIceDamage(0);
         }
     }
 
 }
 
-public int alterWeaponAttack(Race race)
+public void alterWeaponAttack(Race race)
 {
-    if(race.equals(Race.HUMAN))
-    {
-        int normalDamage = getNormalDamage();
-        normalDamage += 7;
-        return normalDamage;
-    }
-    if(race.equals(Race.GOBLIN))
-    {
-        int normalDamage = getNormalDamage();
-        normalDamage += 4;
-        return normalDamage;
-    }
 
-    if(race.equals(Race.ORC))
-    {
-        int normalDamage = getNormalDamage();
-        normalDamage += 2;
-        return normalDamage;
-    }
 
-    if(race.equals(Race.ELF))
-    {
-        int normalDamage = getNormalDamage();
-        normalDamage += 2;
-        return normalDamage;
-    }
-
-    if(race.equals(Race.DWARF))
-    {
-        int normalDamage = getNormalDamage();
-        normalDamage += 4;
-        return normalDamage;
-    }
-
-    if(race.equals(Race.MANDOLORIAN))
-    {
-        int normalDamage = getNormalDamage();
-        normalDamage += 6;
-        return normalDamage;
-    }
-    return 0;
 }
 
-public int alterFireAttack(Race race)
+public void alterFireAttack(Race race)
 {
-    if(race.equals(Race.HUMAN))
-    {
-        int fireDamage = getFireDamage();
-        fireDamage += 3;
-        return fireDamage;
-    }
-    if(race.equals(Race.GOBLIN))
-    {
-        int fireDamage = getFireDamage();
-        fireDamage += 3;
-        return fireDamage;
-    }
 
-    if(race.equals(Race.ORC))
-    {
-        int fireDamage = getFireDamage();
-        fireDamage += 2;
-        return fireDamage;
-    }
 
-    if(race.equals(Race.ELF))
-    {
-        int fireDamage = getFireDamage();
-        fireDamage += 3;
-        return fireDamage;
-    }
-
-    if(race.equals(Race.DWARF))
-    {
-        int fireDamage = getFireDamage();
-        fireDamage += 6;
-        return fireDamage;
-    }
-
-    if(race.equals(Race.MANDOLORIAN))
-    {
-        int fireDamage = getFireDamage();
-        fireDamage += 7;
-        return fireDamage;
-    }
-
-    return 0;
 }
 
-public int alterIceAttack(Race race)
+public void alterIceAttack(Race race)
 {
-    if(race.equals(Race.HUMAN))
-    {
-        int iceDamage = getIceDamage();
-        iceDamage += 3;
-        return iceDamage;
-    }
     if(race.equals(Race.GOBLIN))
     {
-        int iceDamage = getIceDamage();
-        iceDamage += 5;
-        return iceDamage;
-    }
+    Race.GOBLIN = setIceAttack();
 
-    if(race.equals(Race.ORC))
-    {
-        int iceDamage = getIceDamage();
-        iceDamage += 6;
-        return iceDamage;
     }
-
-    if(race.equals(Race.ELF))
-    {
-        int iceDamage = getIceDamage();
-        iceDamage += 5;
-        return iceDamage;
-    }
-
-    if(race.equals(Race.DWARF))
-    {
-        int iceDamage = getIceDamage();
-        iceDamage += 3;
-        return iceDamage;
-    }
-
-    else if(race.equals(Race.MANDOLORIAN))
-    {
-        int iceDamage = getIceDamage();
-        iceDamage += 1;
-        return iceDamage;
-    }
-    return 0;
 }
-
 public void alterToHit(Race race)
 {
 
@@ -215,3 +109,15 @@ public void alterEvasion(Race race)
 
 
 }
+   /* public void adjustDurability(int adjustment)
+    {
+        if(adjustment <= 1 && adjustment >= -1)
+        {
+            if((durability + adjustment) > 1)
+                durability = 1;
+            if((durability + adjustment) < 0)
+                durability = 0;
+            else
+                durability += adjustment;
+        }//end if
+    }*/

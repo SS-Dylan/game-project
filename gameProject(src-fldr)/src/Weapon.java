@@ -160,7 +160,7 @@ public class Weapon extends Equipment implements IUsable
 	public void setIceDamage(int dmg)
 	{
 		iceDamage = dmg;
-	}//end setIceDamage
+	} //end setIceDamage
 	
 	/**
 	 * setter for fire Damage         
