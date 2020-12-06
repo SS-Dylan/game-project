@@ -60,7 +60,8 @@ public abstract class Furniture implements IHitable{        //This is abstract. 
 
     public String furnitureAttack(Furniture weapon, Person target)
     {
-        //target.takeDamage(int dmg, int fire, int ice);
-        
+        String furnAttack = "The " + weapon + " has attacked " + target + "!";
+        target.takeDamage(5, 0, 0);
+        return furnAttack;
     }
 }
