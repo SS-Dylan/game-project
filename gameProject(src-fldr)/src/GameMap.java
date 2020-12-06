@@ -27,6 +27,8 @@ public class GameMap {
     }
 
     public String getRoomDescription() {
-        return Room.getDescription();
+        String description;
+        Room.getDescription() = description;
+        return description;
     }
 }
