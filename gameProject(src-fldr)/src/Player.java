@@ -5,7 +5,7 @@
 
 
 
-public class Player {
+public abstract class Player extends Person implements IHitable{
 
     private String playerName;
     private int age;
@@ -14,6 +14,9 @@ public class Player {
     private int currentExp;
     private Person playerPerson;
 
+    public Player(String Name) {
+        super(Name);
+    }
 
 
     public String getPlayerName()
