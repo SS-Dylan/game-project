@@ -23,7 +23,7 @@ public class GameMap {
     }
 
     Public changeRoom() {  //Not fully sure what to do on this one
-
+        return "";
     }
 
     public String getRoomDescription() {
