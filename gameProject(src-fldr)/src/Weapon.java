@@ -157,10 +157,10 @@ public class Weapon extends Equipment implements IUsable
 	 * @param
 	 * @return
 	 */
-	public Race setIceDamage(int dmg)
+	public void setIceDamage(int dmg)
 	{
 		iceDamage = dmg;
-	}//end setIceDamage
+	} //end setIceDamage
 	
 	/**
 	 * setter for fire Damage         

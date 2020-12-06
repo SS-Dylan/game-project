@@ -6,7 +6,7 @@ import java.util.Objects;
  */
 
 
-public class RaceManager extends Weapon
+public abstract class RaceManager extends Weapon implements IHitable
 {
 
     /**
@@ -44,7 +44,7 @@ public void alterIceDamage(Race race)
     {
         if(race.equals(Race.HUMAN))
         {
-             setIceDamage(4);
+            takeDamage(4, 10, 4);
         }
         if(race.equals(Race.GOBLIN))
         {

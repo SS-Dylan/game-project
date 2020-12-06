@@ -4,7 +4,7 @@
 
  */
 
-public abstract class Furniture implements IHitable{
+public abstract class Furniture implements IHitable{        //This is abstract.  I think we need a furniture manager to be abstract.
 
     private String name;
     private int value;
