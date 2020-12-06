@@ -3,8 +3,6 @@
  * CSCI 1260-901
  */
 
-
-
 public abstract class Player extends Person implements IHitable{
 
     private String playerName;
