@@ -6,7 +6,7 @@
 public class LevelManager Player {
 
     public void levelUp() {
-        if (getExp == 100) {
+        if (getExp() == 100) {
             playerLevel++;
         } else if (currentExp == < 100) {
             playerLevel = getPlayerLevel;
@@ -33,8 +33,12 @@ public class LevelManager Player {
 
     }
 
-    public String checkLevelUp() {
+    public boolean checkLevelUp() { //Changed to true/false to decide if okay level up
 
-        return Player.getPlayerLevel();
+        if(Player.getPlayerLevel() >= 100) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
