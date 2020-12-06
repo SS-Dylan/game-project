@@ -1,3 +1,10 @@
+/**
+ * Dylan Colburn
+ * CSCI 1260-901
+ */
+
+
+
 public class Player {
 
     private String playerName;
