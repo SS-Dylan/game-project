@@ -67,6 +67,18 @@ public class Player extends Person implements IHitable{
         return currentExp;
     }
 
+    public void setCurrentExp(int exp)
+    {
+        if (exp >= 0)
+        {
+            this.currentExp = exp;
+        }
+        else
+        {
+            exp =  0;
+        }
+    }
+
     public int getMoney()
     {
         return money;

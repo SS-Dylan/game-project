@@ -8,41 +8,49 @@ public class LevelManager{
     public  Player player = new Player();
 
     public void levelUp() { //Not fully sure on this one
-        if (getExp() == 100) { //Add a level up method to player?
+        if (player.getCurrentExp() == 100) { //Add a level up method to player?
             int playerLevel = player.getPlayerLevel();
             playerLevel++;
             player.setPlayerLevel(playerLevel);
-        } else if (getExp() <= 100) {
+        } else if (player.getCurrentExp() <= 100) {
             ;
         }
     }
 
-    public void earnExp() {
-
+    public void earnExp(Player player, int earnedExp)
+    {
+        player.setCurrentExp(player.getCurrentExp() + earnedExp);
     }
 
-    public int getExp() {
+    public int getExp(Player player)
+    {
         return player.getCurrentExp();
     }
 
-    public void increaseWeaponDamage(int level) {
+        public void increaseWeaponDamage(Player player, Weapon weapon)
+        {
+            weapon.setNormalDamage(weapon.getNormalDamage() + (player.getPlayerLevel() * 1/4));
+        }
 
-    }
+        public void increaseFireDamage(Player player, Weapon weapon)
+        {
+            weapon.setFireDamage(weapon.getFireDamage() + (player.getPlayerLevel() * 1/2));
+        }
 
-    public void increaseFireDamage(int level) {
+        public void increaseIceDamage(Player player, Weapon weapon)
+        {
+            weapon.setIceDamage(weapon.getIceDamage() + (player.getPlayerLevel() * 1/2));
+        }
 
-    }
+        public boolean checkLevelUp(Player player) { //Changed to true/false to decide if okay level up
 
-    public void increaseIceDamage(int level) {
-
-    }
-
-    public boolean checkLevelUp() { //Changed to true/false to decide if okay level up
-
-        if(player.getPlayerLevel() >= 100) {
+        if(player.getPlayerLevel() >= 100)
+        {
             return true;
-        } else {
+        }
+        else
+        {
             return false;
         }
     }
-}
+    }
