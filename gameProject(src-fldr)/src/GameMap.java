@@ -14,10 +14,12 @@ public class GameMap {
 
     Room room = new Room(); //Initialize a room object for getRoomDescription
 
-    public void showMap() { //Print out the 3x3 grid
-        System.out.println(rooms[0][0] + rooms[0][1] + rooms[0][2]);
-        System.out.println(rooms[1][0] + rooms[1][1] + rooms[1][2]);
-        System.out.println(rooms[2][0] + rooms[2][1] + rooms[2][2]);
+    public void showMap() { //Print out the 5x5 grid
+        System.out.println(rooms[0][0] + rooms[0][1] + rooms[0][2] + rooms[0][3] + rooms[0][4]);
+        System.out.println(rooms[1][0] + rooms[1][1] + rooms[1][2] + rooms[1][3] + rooms[1][4]);
+        System.out.println(rooms[2][0] + rooms[2][1] + rooms[2][2] + rooms[2][3] + rooms[2][4]);
+        System.out.println(rooms[3][0] + rooms[3][1] + rooms[3][2] + rooms[3][3] + rooms[3][4]);
+        System.out.println(rooms[4][0] + rooms[4][1] + rooms[4][2] + rooms[4][3] + rooms[4][4]);
     }
 
     public String currentLocation() {
