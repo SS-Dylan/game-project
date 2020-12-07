@@ -10,7 +10,7 @@ public class GameMap {
         {" A3 ", " B3 ", " C3 ", " D3 ", " E3 "},
         {" A4 ", " B4 ", " C4 ", " D4 ", " E4 "},
         {" A5 ", " B5 ", " C5 ", " D5 ", " E5 "}
-    }; //Game map layout in a simple 3x3 grid
+    }; //Game map layout in a simple 5x5 grid
 
     Room room = new Room(); //Initialize a room object for getRoomDescription
 
