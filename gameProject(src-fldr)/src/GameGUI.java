@@ -51,6 +51,7 @@ import javax.swing.JWindow;
                 resetItem;
         private JPanel		gamePanel,
                 mapPanel,
+                mapGraphPanel,
                 mapAndCharacterPanel,
                 outputPanel,
                 characterPanel;
@@ -77,8 +78,27 @@ import javax.swing.JWindow;
                 characterFont;
         private GridLayout	characterLayout,
                 mapLayout,
+                mapGraphLayout,
                 camLayout;
+        private JLabel		sq1,
+                sq2,
+                sq3,
+                sq4,
+                sq5,
+                sq6,
+                sq7,
+                sq8,
+                sq9,
+                sq10,
+                sq11,
+                sq12,
+                sq13,
+                sq14,
+                sq15,
+                sq16;
         private JScrollPane	outputScroll;
+        private String		s;
+        //public GameMap		Map;
 
 
         public GameGUI()
@@ -205,6 +225,154 @@ import javax.swing.JWindow;
             mapLayout = new GridLayout(1,2);
             mapPanel = new JPanel();
             mapPanel.add (outputArea);
+
+
+            mapGraphLayout = new GridLayout(4,4);
+            mapGraphPanel = new JPanel(mapGraphLayout);
+
+
+            sq1 = new JLabel("\nUnexplored\nRoom\n");
+            sq2 = new JLabel("Unexplored\nRoom");
+            sq3 = new JLabel("Unexplored\nRoom");
+            sq4 = new JLabel("Unexplored\nRoom");
+            sq5 = new JLabel("Unexplored\nRoom");
+            sq6 = new JLabel("Unexplored\nRoom");
+            sq7 = new JLabel("Unexplored\nRoom");
+            sq8 = new JLabel("Unexplored\nRoom");
+            sq9 = new JLabel("Unexplored\nRoom");
+            sq10 = new JLabel("Unexplored\nRoom");
+            sq11 = new JLabel("Unexplored\nRoom");
+            sq12 = new JLabel("Unexplored\nRoom");
+            sq13 = new JLabel("Unexplored\nRoom");
+            sq14 = new JLabel("Unexplored\nRoom");
+            sq15 = new JLabel("Unexplored\nRoom");
+            sq16 = new JLabel("Unexplored\nRoom");
+
+            sq1.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq2.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq3.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq4.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq5.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq6.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq7.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq8.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq9.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq10.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq11.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq12.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq13.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq14.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq15.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+            sq16.setBackground(Color.getHSBColor (.30f, .35f, .40f));
+
+
+            sq1.setFont (inputFont);
+            sq2.setFont (inputFont);
+            sq3.setFont (inputFont);
+            sq4.setFont (inputFont);
+            sq5.setFont (inputFont);
+            sq6.setFont (inputFont);
+            sq7.setFont (inputFont);
+            sq8.setFont (inputFont);
+            sq9.setFont (inputFont);
+            sq10.setFont (inputFont);
+            sq11.setFont (inputFont);
+            sq12.setFont (inputFont);
+            sq13.setFont (inputFont);
+            sq14.setFont (inputFont);
+            sq15.setFont (inputFont);
+            sq16.setFont (inputFont);
+
+            sq1.setForeground (Color.WHITE);
+            sq2.setForeground (Color.WHITE);
+            sq3.setForeground (Color.WHITE);
+            sq4.setForeground (Color.WHITE);
+            sq5.setForeground (Color.WHITE);
+            sq6.setForeground (Color.WHITE);
+            sq7.setForeground (Color.WHITE);
+            sq8.setForeground (Color.WHITE);
+            sq9.setForeground (Color.WHITE);
+            sq10.setForeground (Color.WHITE);
+            sq11.setForeground (Color.WHITE);
+            sq12.setForeground (Color.WHITE);
+            sq13.setForeground (Color.WHITE);
+            sq14.setForeground (Color.WHITE);
+            sq15.setForeground (Color.WHITE);
+            sq16.setForeground (Color.WHITE);
+
+            sq1.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq2.setBackground (Color.getHSBColor (.3f, .65f, .70f));
+            sq3.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq4.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq5.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq6.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq7.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq8.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq9.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq10.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq11.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq12.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq13.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq14.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq15.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+            sq16.setBackground (Color.getHSBColor (.30f, .65f, .70f));
+
+            sq1.setOpaque(true);
+            sq2.setOpaque(true);
+            sq3.setOpaque(true);
+            sq4.setOpaque(true);
+            sq5.setOpaque(true);
+            sq6.setOpaque(true);
+            sq7.setOpaque(true);
+            sq8.setOpaque(true);
+            sq9.setOpaque(true);
+            sq10.setOpaque(true);
+            sq11.setOpaque(true);
+            sq12.setOpaque(true);
+            sq13.setOpaque(true);
+            sq14.setOpaque(true);
+            sq15.setOpaque(true);
+            sq16.setOpaque(true);
+
+
+            sq1.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq2.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq3.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq4.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq5.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq6.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq7.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq8.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq9.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq10.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq11.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq12.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq13.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq14.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq15.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+            sq16.setBorder (BorderFactory.createLineBorder (Color.getHSBColor(.44f,.6f,.77f), 4));
+
+
+            mapGraphPanel.add (sq1);
+            mapGraphPanel.add (sq2);
+            mapGraphPanel.add (sq3);
+            mapGraphPanel.add (sq4);
+            mapGraphPanel.add (sq5);
+            mapGraphPanel.add (sq6);
+            mapGraphPanel.add (sq7);
+            mapGraphPanel.add (sq8);
+            mapGraphPanel.add (sq9);
+            mapGraphPanel.add (sq10);
+            mapGraphPanel.add (sq11);
+            mapGraphPanel.add (sq12);
+            mapGraphPanel.add (sq13);
+            mapGraphPanel.add (sq14);
+            mapGraphPanel.add (sq15);
+            mapGraphPanel.add (sq16);
+
+            mapPanel.add (mapGraphPanel);
+
+
 
             //buildCharacterPanel
             characterPanel = new JPanel();
@@ -353,12 +521,74 @@ import javax.swing.JWindow;
                 }
                 else if(selection == confirmButton)
                 {
-                    String s = "";
-                    inputArea.getText();    //insert a LOT of the old driver code and this is basically the new driver
-                    s.toLowerCase();
+                    //insert a LOT of the old driver code and this is basically the new driver
+                    s = "";
+                    s = inputArea.getText ( );
+                    s.toLowerCase ( );
+                    switch(s)
+                    {
+                        case "Move":
+                            s = JOptionPane.showInputDialog("North, East, South, or West?");
+                            //code to make sure move is legal
+                            break;
+                        case "Attack":
+                            s = JOptionPane.showInputDialog("Light, Medium, or Heavy attack?");
+                            s.toLowerCase ( );
+                            if(s.contains("light"))
+                            {
+                                //code for light attacking current enemy in room
+                            }
+                            else if(s.contains ("medium"))
+                            {
+                                //code for medium attacking current enemy
+                            }
+                            else if(s.contains ("heavy"))
+                            {
+                                //code for heavy attack
+                            }
+                            break;
+                        case "sell":
+                            //code for selling furniture in room
+                            break;
+                        case "surrender":
+                            //code for surrender method
+                            break;
+                        case "use":
+                            s = JOptionPane.showInputDialog("What Item?");
+                            String t = JOptionPane.showInputDialog("Target? (enemy or self)");
+                            //code for using item
+                            break;
+                        case "description":
+                            //code for room and enemy descriptions
+                            break;
+
+
+
+
+                    }
+
+
+
+
+
+
+
+
+
+
 
                 }
             }
         }
-
     }
+
+
+
+
+
+
+
+
+
+
+
