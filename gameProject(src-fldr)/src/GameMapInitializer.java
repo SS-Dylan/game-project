@@ -3,20 +3,21 @@
  */
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class GameMapInitializer {
-    private static String[] generateRoom()
-    {
+    private static String[] generateRoom() throws FileNotFoundException {
         String fileName = "CreationFiles/Rooms";
         Random rand = new Random();
         int i = 0;
         int randomLine = rand.nextInt(10);
         File readFile = new File(fileName);
         ArrayList<String> addedList = new ArrayList<String>();
-        Scanner inputFile = new Scanner(readFile);
+        Scanner inputFile;
+        inputFile = new Scanner(readFile);
         while(randomLine >= i)//Reads the file line by line
         {
                 String currentLine = inputFile.nextLine();
@@ -30,6 +31,6 @@ public class GameMapInitializer {
 
 
         inputFile.close();
-        return "";
+        return generateRoom();
     }
 }
