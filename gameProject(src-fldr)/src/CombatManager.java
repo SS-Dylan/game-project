@@ -2,7 +2,7 @@
  * Dylan Shaffer
  * CSCI 1260-901
  */
-public abstract class CombatManager extends Enemy implements IHitable {
+public class CombatManager extends Enemy implements IHitable {
 
     public CombatManager(String Name) {
         super(Name);

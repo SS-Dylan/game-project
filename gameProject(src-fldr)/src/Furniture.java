@@ -4,7 +4,7 @@
 
  */
 
-public abstract class Furniture implements IHitable{        //This is abstract.  I think we need a furniture manager to be abstract.
+public class Furniture implements IHitable{        //This is abstract.  I think we need a furniture manager to be abstract.
 
     private String name;
     private int value;
@@ -39,10 +39,30 @@ public abstract class Furniture implements IHitable{        //This is abstract. 
         return value;
     }
 
+    @Override
+    public int getMaxHealth() {
+        return 0;
+    }
+
+    @Override
+    public int getCurrentHealth() {
+        return 0;
+    }
+
+    @Override
+    public boolean isHitableDestroyed() {
+        return false;
+    }
+
     public int takeDamage(int dmg, int fire, int ice)
     {
         int totalDamage = dmg + ice + fire;
         return totalDamage;
+    }
+
+    @Override
+    public int heal(int amt) {
+        return 0;
     }
 
     public int sellFurniture(Furniture target)

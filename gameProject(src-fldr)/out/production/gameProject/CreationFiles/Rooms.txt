@@ -1,0 +1,10 @@
+Mountain
+Plain
+Forest
+Tundra
+Swamp
+Town
+Dock
+Tavern
+Market
+Dungeon

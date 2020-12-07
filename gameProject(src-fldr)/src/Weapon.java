@@ -52,7 +52,11 @@ public class Weapon extends Equipment implements IUsable
 		fireDamage = fire;
 		weaponHand = wp;
 	}//end Weapon
-	
+
+	public Weapon() {
+		super();
+	}
+
 	/**
 	 * returns name from Equipment object modified with the proper prefixes
 	 * from damage attributes        

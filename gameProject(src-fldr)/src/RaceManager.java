@@ -6,7 +6,7 @@ import java.util.Objects;
  */
 
 
-public abstract class RaceManager extends Weapon implements IHitable
+public class RaceManager extends Weapon implements IHitable
 {
 
     /**
@@ -27,9 +27,12 @@ public abstract class RaceManager extends Weapon implements IHitable
         super(name, dmg, ice, fire, wp);
     }
 
+    public RaceManager() {
+        super();
+    }
 
 
-public void alterDamage(Race race)
+    public void alterDamage(Race race)
 {
     {
         if(race.equals(Race.HUMAN))
@@ -200,4 +203,28 @@ public int alterIceAttack(Race race)
     return 0;
 }
 
+    @Override
+    public int getMaxHealth() {
+        return 0;
+    }
+
+    @Override
+    public int getCurrentHealth() {
+        return 0;
+    }
+
+    @Override
+    public boolean isHitableDestroyed() {
+        return false;
+    }
+
+    @Override
+    public int takeDamage(int dmg, int fire, int ice) {
+        return 0;
+    }
+
+    @Override
+    public int heal(int amt) {
+        return 0;
+    }
 }

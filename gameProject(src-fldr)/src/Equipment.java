@@ -42,7 +42,11 @@ public class Equipment
 		price = newPrice;
 		durability = newDurability;
 	}//end Equipment
-	
+
+	public Equipment() {
+
+	}
+
 	/**
 	 * getter for equipment name       
 	 *

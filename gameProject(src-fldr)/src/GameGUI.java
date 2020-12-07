@@ -6,7 +6,7 @@
      * ---------------------------------------------------------------------------
      * Creator's name and email: Dylan Zelasko
      * Course:  CSCI 1260
-     * Creation Date: Dec 6, 2020
+     * Creation Date: Dec 2, 2020
      * ---------------------------------------------------------------------------
      */
 
@@ -36,12 +36,18 @@ import javax.swing.JWindow;
      * Enter type purpose here
      *
      * <hr>
-     * Date created: Dec 6, 2020
+     * Date created: Dec 2, 2020
      * <hr>
      * @author Dylan Zelasko
      */
     public class GameGUI extends JFrame
     {
+        private CombatManager GUICombat;
+        private CombatAction HeadBusting;
+        private LevelManager LevelBoy;
+        private RaceManager RaceBoy;
+        private Furniture stuff;
+
         private static final long serialVersionUID = 1L;
         private JMenuBar 	gameMenuBar;
         private JMenu		closeMenu,
@@ -103,6 +109,11 @@ import javax.swing.JWindow;
 
         public GameGUI()
         {
+            GUICombat = new CombatManager("Bruh");
+            HeadBusting = new CombatAction();
+            LevelBoy = new LevelManager();
+            RaceBoy = new RaceManager();
+            stuff = new Furniture();
             //set size and close operation for GUI. closing ends program
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setSize(1080, 720 );
@@ -524,7 +535,8 @@ import javax.swing.JWindow;
                     //insert a LOT of the old driver code and this is basically the new driver
                     s = "";
                     s = inputArea.getText ( );
-                    s.toLowerCase ( );
+                    s.toLowerCase();
+                    inputArea.setText("");
                     switch(s)
                     {
                         case "Move":
@@ -536,22 +548,23 @@ import javax.swing.JWindow;
                             s.toLowerCase ( );
                             if(s.contains("light"))
                             {
-                                //code for light attacking current enemy in room
+                              // HeadBusting.lightAttack(t); //code for light attacking current enemy in room
                             }
                             else if(s.contains ("medium"))
                             {
-                                //code for medium attacking current enemy
+                               //HeadBusting.mediumAttack(t); //code for medium attacking current enemy
                             }
                             else if(s.contains ("heavy"))
                             {
-                                //code for heavy attack
+                               // HeadBusting.heavyAttack(t);//code for heavy attack
                             }
                             break;
                         case "sell":
-                            //code for selling furniture in room
+                           // stuff.sellFurniture(t);//code for selling furniture in room
                             break;
                         case "surrender":
-                            //code for surrender method
+                            GUICombat.surrender();//code for surrender method
+                            outputArea.setText("You have surrendered.");
                             break;
                         case "use":
                             s = JOptionPane.showInputDialog("What Item?");

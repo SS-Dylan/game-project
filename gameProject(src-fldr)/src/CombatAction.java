@@ -1,3 +1,7 @@
+/*
+    Author: Torrey Warren
+ */
+
 public class CombatAction {
 
     public int lightAttack(IHitable target, Weapon weapon)
