@@ -9,7 +9,7 @@ public class LevelManager{
 
     public void levelUp() { //Not fully sure on this one
         if (getExp() == 100) { //Add a level up method to player?
-            int playerLevel = player. getPlayerLevel();
+            int playerLevel = player.getPlayerLevel();
             playerLevel++;
             player.setPlayerLevel(playerLevel);
         } else if (getExp() <= 100) {

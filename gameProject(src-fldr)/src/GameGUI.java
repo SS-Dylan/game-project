@@ -353,7 +353,10 @@ import javax.swing.JWindow;
                 }
                 else if(selection == confirmButton)
                 {
-                    //insert a LOT of the old driver code and this is basically the new driver
+                    String s = "";
+                    inputArea.getText();    //insert a LOT of the old driver code and this is basically the new driver
+                    s.toLowerCase();
+
                 }
             }
         }
