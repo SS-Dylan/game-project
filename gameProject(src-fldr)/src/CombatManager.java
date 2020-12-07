@@ -2,24 +2,36 @@
  * Dylan Shaffer
  * CSCI 1260-901
  */
-public class CombatManager {
+public abstract class CombatManager extends Enemy implements IHitable {
 
-    public String getEnemyRace() {
-        return "";
+    public CombatManager(String Name) {
+        super(Name);
+    }
+
+    public Race getEnemyRace() {
+        return getPlayerRace();
     }
 
     public boolean enemyKilled() {
-        if(/* enemy is dead */) {
+        if(Enemy.getCurrentHealth <= 0)
+        {
             return true;
-        } else {
+        }
+        else
+        {
             return false;
         }
     }
 
-    public boolean surrender() {
-        if(/* enemy surrenders */) {
+    public boolean surrender()
+    {
+        boolean finish = false;
+        if(finish = true)
+        {
             return true;
-        } else {
+        }
+        else
+        {
             return false;
         }
     }
