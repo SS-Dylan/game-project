@@ -12,8 +12,9 @@ public abstract class CombatManager extends Enemy implements IHitable {
         return getPlayerRace();
     }
 
-    public boolean enemyKilled() {
-        if(Enemy.getCurrentHealth <= 0)
+    public boolean enemyKilled()
+    {
+        if(Enemy.currentHealth <= 0)
         {
             return true;
         }
