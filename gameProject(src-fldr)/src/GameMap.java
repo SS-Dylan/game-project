@@ -22,18 +22,21 @@ public class GameMap {
         System.out.println(rooms[4][0] + rooms[4][1] + rooms[4][2] + rooms[4][3] + rooms[4][4]);
     }
 
-    public String currentLocation() {
-        return ""; //Find the current index and return it somehow
+    public String currentLocation() //Find the current index and return it somehow
+    {
+        return "";
     }
 
-    public Room changeRoom() {  //Not fully sure what to do on this one     //FIX THIS
+    public Room changeRoom() //Not fully sure what to do on this one     //FIX THIS
+    {
         room = new Room();
         return room;
     }
 
-    public String getRoomDescription() {
-        String description = "Fuck this.";          //FIX THIS
-      //  Room.getDescription() = description;
+    public String getRoomDescription()      //FIX THIS
+    {
+        String description = "";
+        description = room.getDescription();
         return description;
     }
 }
