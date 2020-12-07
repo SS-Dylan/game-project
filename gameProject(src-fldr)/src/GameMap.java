@@ -22,13 +22,14 @@ public class GameMap {
         return ""; //Find the current index and return it somehow
     }
 
-    Public changeRoom() {  //Not fully sure what to do on this one
-        return "";
+    public Room changeRoom() {  //Not fully sure what to do on this one     //FIX THIS
+        room = new Room();
+        return room;
     }
 
     public String getRoomDescription() {
-        String description;
-        Room.getDescription() = description;
+        String description = "Fuck this.";          //FIX THIS
+      //  Room.getDescription() = description;
         return description;
     }
 }

@@ -14,7 +14,6 @@ public class Goblin extends Person
         super(Name);
     }
 
-    @Override
     public ArrayList<String> getThingsToSay() {
         return null;
     }

@@ -11,6 +11,7 @@ public abstract class Furniture implements IHitable{        //This is abstract. 
     private String location;
     private int maxHealth;
     private int currentHealth;
+    private boolean sold;
 
 
     public Furniture()
@@ -22,9 +23,10 @@ public abstract class Furniture implements IHitable{        //This is abstract. 
     {
         name = Name;
         maxHealth = IHitable.maxHealth;
-        currentHealth = IHitable.currentHealth;     //SHOULD we make health variables specifically for furniture???
+        currentHealth = IHitable.currentHealth;
         this.location = location;
         this.value = value;
+        this.sold = false;
     }
 
     public String getLocation()
@@ -43,19 +45,17 @@ public abstract class Furniture implements IHitable{        //This is abstract. 
         return totalDamage;
     }
 
-    public String sellFurniture(Furniture target)          //This should probably have a way to add gold to inventory. This is just a message.
+    public int sellFurniture(Furniture target)
     {
-        String sold = "This thing is worthless!";
-        if(target.value < 0)
+        if(sold == false)
         {
-            return sold;
+            this.sold = true;
+            return value;
         }
-
         else
         {
-            sold = "You have sold this for: " + value + " gold.";
+            return 0;
         }
-        return sold;
     }
 
     public String furnitureAttack(Furniture weapon, Person target)

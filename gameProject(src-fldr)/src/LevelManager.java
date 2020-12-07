@@ -5,11 +5,15 @@
 
 public class LevelManager{
 
+    public  Player player = new Player();
+
     public void levelUp() { //Not fully sure on this one
         if (getExp() == 100) { //Add a level up method to player?
-            Player.getPlayerLevel++;
+            int playerLevel = player. getPlayerLevel();
+            playerLevel++;
+            player.setPlayerLevel(playerLevel);
         } else if (getExp() <= 100) {
-            playerLevel = getPlayerLevel;
+            ;
         }
     }
 
@@ -18,7 +22,7 @@ public class LevelManager{
     }
 
     public int getExp() {
-        return Player.getCurrentExp();
+        return player.getCurrentExp();
     }
 
     public void increaseWeaponDamage(int level) {
@@ -35,7 +39,7 @@ public class LevelManager{
 
     public boolean checkLevelUp() { //Changed to true/false to decide if okay level up
 
-        if(Player.getPlayerLevel() >= 100) {
+        if(player.getPlayerLevel() >= 100) {
             return true;
         } else {
             return false;

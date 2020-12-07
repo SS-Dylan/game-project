@@ -1,6 +1,6 @@
 
 
-public abstract class Enemy extends Person implements IHitable {
+public abstract class Enemy extends Player implements IHitable {
 
 
     public Enemy(String Name)

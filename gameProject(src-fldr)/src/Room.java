@@ -7,7 +7,7 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public abstract class Room implements IHitable{
+public class Room implements IHitable{
 
     private String description;
     private String size;
@@ -103,4 +103,28 @@ public abstract class Room implements IHitable{
         return description;
     }
 
+    @Override
+    public int getMaxHealth() {
+        return 0;
+    }
+
+    @Override
+    public int getCurrentHealth() {
+        return 0;
+    }
+
+    @Override
+    public boolean isHitableDestroyed() {
+        return false;
+    }
+
+    @Override
+    public int takeDamage(int dmg, int fire, int ice) {
+        return 0;
+    }
+
+    @Override
+    public int heal(int amt) {
+        return 0;
+    }
 }

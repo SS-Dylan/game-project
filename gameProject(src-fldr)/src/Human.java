@@ -23,7 +23,6 @@ public class Human extends Person
         super(name);
     }
 
-    @Override
     public ArrayList<String> getThingsToSay() {
         return null;
     }

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class Person implements IInventory, IHitable {
+public class Person implements IInventory, IHitable {
     private String name;
     private ArrayList<String> thingsToSay = new ArrayList();
     private Helmet helmet;
@@ -108,7 +108,6 @@ public abstract class Person implements IInventory, IHitable {
         return "Name: " + name + "Current Health: " + currentHealth/maxHealth + "Helmet: " + helmetName + "Plackart: " + plackartName + "Weapon: " + weaponName;
     }
 
-    public abstract ArrayList<String> getThingsToSay();
 
     public void setThingsToSay(ArrayList<String> list){
 
@@ -164,5 +163,85 @@ public abstract class Person implements IInventory, IHitable {
             totalDamage = 0;
 
         return totalDamage;
+    }
+
+    @Override
+    public int heal(int amt) {
+        return 0;
+    }
+
+    @Override
+    public int getMaxHealth() {
+        return 0;
+    }
+
+    public int getCurrentHealth()
+    {
+        return currentHealth;
+    }
+
+    @Override
+    public boolean isHitableDestroyed() {
+        return false;
+    }
+
+    @Override
+    public void pickup(Equipment equipment) {
+
+    }
+
+    @Override
+    public void transferAllEquipmentFrom(IInventory other) {
+
+    }
+
+    @Override
+    public int countArmor() {
+        return 0;
+    }
+
+    @Override
+    public int countWeapon() {
+        return 0;
+    }
+
+    @Override
+    public int countConsumables() {
+        return 0;
+    }
+
+    @Override
+    public int countEquipment() {
+        return 0;
+    }
+
+    @Override
+    public String getEquipmentList() {
+        return null;
+    }
+
+    @Override
+    public void getEquipmentInfo(String list, int index) {
+
+    }
+
+    @Override
+    public Equipment getEquipment(int index) {
+        return null;
+    }
+
+    @Override
+    public void dropEquipment(int index) {
+
+    }
+
+    @Override
+    public void dropAllEquipment() {
+
+    }
+
+    @Override
+    public void addEquipment(Equipment equipment) {
+
     }
 }
